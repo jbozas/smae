@@ -1,0 +1,1315 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20181.18.0706.1237                               -->
+<workbook original-version='18.1' source-build='2018.1.3 (20181.18.0706.1237)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Semaforo' inline='true' name='federated.0hijn0r0q56b9u1guhsp10fpbuv6' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Semaforo' name='textscan.1p6x2lu1rpqy0t1awnsol064zpha'>
+            <connection class='textscan' directory='C:/SMAE/data/1' filename='Semaforo.txt' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1p6x2lu1rpqy0t1awnsol064zpha' name='Semaforo.txt' table='[Semaforo#txt]' type='table'>
+          <columns character-set='windows-1252' header='yes' locale='es_AR' separator=';'>
+            <column datatype='integer' name='Año_Académico' ordinal='0' />
+            <column datatype='string' name='Especialidad' ordinal='1' />
+            <column datatype='string' name='Curso' ordinal='2' />
+            <column datatype='integer' name='Comisión' ordinal='3' />
+            <column datatype='string' name='Materia' ordinal='4' />
+            <column datatype='integer' name='Nota' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Semaforo.txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;windows-1252&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_AR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Año_Académico</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Año_Académico]</local-name>
+            <parent-name>[Semaforo.txt]</parent-name>
+            <remote-alias>Año_Académico</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Especialidad</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Especialidad]</local-name>
+            <parent-name>[Semaforo.txt]</parent-name>
+            <remote-alias>Especialidad</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Curso</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Curso]</local-name>
+            <parent-name>[Semaforo.txt]</parent-name>
+            <remote-alias>Curso</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Comisión</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Comisión]</local-name>
+            <parent-name>[Semaforo.txt]</parent-name>
+            <remote-alias>Comisión</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Materia</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Materia]</local-name>
+            <parent-name>[Semaforo.txt]</parent-name>
+            <remote-alias>Materia</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Nota</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Nota]</local-name>
+            <parent-name>[Semaforo.txt]</parent-name>
+            <remote-alias>Nota</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Año Académico' datatype='integer' name='[Año_Académico]' role='dimension' type='quantitative' />
+      <column caption='Hoy' datatype='date' name='[Calculation_580401431332925440]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='TODAY()' />
+      </column>
+      <column caption='Positivos (&gt;=50% de Aprobados)' datatype='integer' name='[Calculation_580401431333007361]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='sum(IF Nota &gt;3 THEN 1 END)' />
+      </column>
+      <column caption='Negativos (&lt;50% de Aprobados)' datatype='integer' name='[Calculation_580401431333277698]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='sum(IF [Nota] &lt;4 and [Nota]&gt;0 THEN 1 END)' />
+      </column>
+      <column caption='Sin Nota' datatype='integer' name='[Calculation_580401431333449731]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='sum(if (ISNULL([Nota])) OR ([Nota] = 0) THEN 1 END)' />
+      </column>
+      <column caption='Semaforo' datatype='string' name='[Calculation_580401431333642244]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_580401431333277698] &gt; [Calculation_580401431333007361] THEN &quot;Negativos (&lt;50% de Aprobados)&quot;&#13;&#10;ELSE IF [Calculation_580401431333449731]&lt; [Calculation_580401431333007361] or [Calculation_580401431333007361]&gt;0 THEN &quot;Positivos (&gt;=50% de Aprobados)&quot;&#13;&#10;ELSE &quot;Sin Nota&quot;&#13;&#10;END&#13;&#10;END' />
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[Comisión]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[Curso]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Nivel]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Curso]' new-bin='true'>
+          <bin default-name='false' value='&quot;1º Año&quot;'>
+            <value>&quot;1C1&quot;</value>
+            <value>&quot;1C2&quot;</value>
+            <value>&quot;1C3&quot;</value>
+            <value>&quot;1D1&quot;</value>
+            <value>&quot;1D2&quot;</value>
+            <value>&quot;1D3&quot;</value>
+            <value>&quot;1D4&quot;</value>
+            <value>&quot;1D5&quot;</value>
+            <value>&quot;1D6&quot;</value>
+            <value>&quot;1D7&quot;</value>
+            <value>&quot;1H10&quot;</value>
+            <value>&quot;1H20&quot;</value>
+            <value>&quot;1H22&quot;</value>
+            <value>&quot;1H9&quot;</value>
+            <value>&quot;1K1&quot;</value>
+            <value>&quot;1K10&quot;</value>
+            <value>&quot;1K11&quot;</value>
+            <value>&quot;1K12&quot;</value>
+            <value>&quot;1K13&quot;</value>
+            <value>&quot;1K14&quot;</value>
+            <value>&quot;1K2&quot;</value>
+            <value>&quot;1K3&quot;</value>
+            <value>&quot;1K4&quot;</value>
+            <value>&quot;1K5&quot;</value>
+            <value>&quot;1K50&quot;</value>
+            <value>&quot;1K6&quot;</value>
+            <value>&quot;1K7&quot;</value>
+            <value>&quot;1K8&quot;</value>
+            <value>&quot;1K9&quot;</value>
+            <value>&quot;1Q1&quot;</value>
+            <value>&quot;1R1&quot;</value>
+            <value>&quot;1R3&quot;</value>
+            <value>&quot;1R4&quot;</value>
+            <value>&quot;1R5&quot;</value>
+            <value>&quot;1R7&quot;</value>
+            <value>&quot;1S1&quot;</value>
+            <value>&quot;1S2&quot;</value>
+            <value>&quot;1S3&quot;</value>
+            <value>&quot;1S4&quot;</value>
+            <value>&quot;1T1&quot;</value>
+            <value>&quot;1T50&quot;</value>
+            <value>&quot;1V1&quot;</value>
+            <value>&quot;1V2&quot;</value>
+            <value>&quot;1V3&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;2º Año&quot;'>
+            <value>&quot;2C1&quot;</value>
+            <value>&quot;2C2&quot;</value>
+            <value>&quot;2C50&quot;</value>
+            <value>&quot;2D1&quot;</value>
+            <value>&quot;2D2&quot;</value>
+            <value>&quot;2D3&quot;</value>
+            <value>&quot;2D4&quot;</value>
+            <value>&quot;2D50&quot;</value>
+            <value>&quot;2K1&quot;</value>
+            <value>&quot;2K10&quot;</value>
+            <value>&quot;2K11&quot;</value>
+            <value>&quot;2K2&quot;</value>
+            <value>&quot;2K3&quot;</value>
+            <value>&quot;2K4&quot;</value>
+            <value>&quot;2K5&quot;</value>
+            <value>&quot;2K6&quot;</value>
+            <value>&quot;2K7&quot;</value>
+            <value>&quot;2K8&quot;</value>
+            <value>&quot;2K9&quot;</value>
+            <value>&quot;2Q1&quot;</value>
+            <value>&quot;2Q50&quot;</value>
+            <value>&quot;2R1&quot;</value>
+            <value>&quot;2R2&quot;</value>
+            <value>&quot;2R3&quot;</value>
+            <value>&quot;2R4&quot;</value>
+            <value>&quot;2R50&quot;</value>
+            <value>&quot;2S1&quot;</value>
+            <value>&quot;2S2&quot;</value>
+            <value>&quot;2S50&quot;</value>
+            <value>&quot;2T1&quot;</value>
+            <value>&quot;2V1&quot;</value>
+            <value>&quot;2V50&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;3º Año&quot;'>
+            <value>&quot;3C1&quot;</value>
+            <value>&quot;3C50&quot;</value>
+            <value>&quot;3D1&quot;</value>
+            <value>&quot;3D2&quot;</value>
+            <value>&quot;3D3&quot;</value>
+            <value>&quot;3K1&quot;</value>
+            <value>&quot;3K12&quot;</value>
+            <value>&quot;3K17&quot;</value>
+            <value>&quot;3K1A&quot;</value>
+            <value>&quot;3K2&quot;</value>
+            <value>&quot;3K3&quot;</value>
+            <value>&quot;3K3A&quot;</value>
+            <value>&quot;3K4&quot;</value>
+            <value>&quot;3K4A&quot;</value>
+            <value>&quot;3K5&quot;</value>
+            <value>&quot;3K50&quot;</value>
+            <value>&quot;3K6&quot;</value>
+            <value>&quot;3K7&quot;</value>
+            <value>&quot;3Q1&quot;</value>
+            <value>&quot;3R1&quot;</value>
+            <value>&quot;3R2&quot;</value>
+            <value>&quot;3R3&quot;</value>
+            <value>&quot;3R4&quot;</value>
+            <value>&quot;3R50&quot;</value>
+            <value>&quot;3S2&quot;</value>
+            <value>&quot;3S3&quot;</value>
+            <value>&quot;3T1&quot;</value>
+            <value>&quot;3V1&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;4º Año&quot;'>
+            <value>&quot;4C1&quot;</value>
+            <value>&quot;4D1&quot;</value>
+            <value>&quot;4D2&quot;</value>
+            <value>&quot;4D3&quot;</value>
+            <value>&quot;4D50&quot;</value>
+            <value>&quot;4K1&quot;</value>
+            <value>&quot;4K2&quot;</value>
+            <value>&quot;4K3&quot;</value>
+            <value>&quot;4K4&quot;</value>
+            <value>&quot;4K4.&quot;</value>
+            <value>&quot;4K5&quot;</value>
+            <value>&quot;4K6&quot;</value>
+            <value>&quot;4Q1&quot;</value>
+            <value>&quot;4Q50&quot;</value>
+            <value>&quot;4R1&quot;</value>
+            <value>&quot;4R2&quot;</value>
+            <value>&quot;4S1&quot;</value>
+            <value>&quot;4S2&quot;</value>
+            <value>&quot;4T1&quot;</value>
+            <value>&quot;4V1&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;5º Año&quot;'>
+            <value>&quot;5C1&quot;</value>
+            <value>&quot;5C1A&quot;</value>
+            <value>&quot;5C1B&quot;</value>
+            <value>&quot;5D1&quot;</value>
+            <value>&quot;5D1.&quot;</value>
+            <value>&quot;5D2&quot;</value>
+            <value>&quot;5D3&quot;</value>
+            <value>&quot;5K1&quot;</value>
+            <value>&quot;5K1_&quot;</value>
+            <value>&quot;5K1.&quot;</value>
+            <value>&quot;5K2&quot;</value>
+            <value>&quot;5K2.&quot;</value>
+            <value>&quot;5K3&quot;</value>
+            <value>&quot;5K3_&quot;</value>
+            <value>&quot;5K4&quot;</value>
+            <value>&quot;5K4_&quot;</value>
+            <value>&quot;5K4.&quot;</value>
+            <value>&quot;5Q1&quot;</value>
+            <value>&quot;5R1&quot;</value>
+            <value>&quot;5R2&quot;</value>
+            <value>&quot;5S1&quot;</value>
+            <value>&quot;5T1&quot;</value>
+            <value>&quot;5V1&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;6º Año&quot;'>
+            <value>&quot;6R1&quot;</value>
+            <value>&quot;6R2&quot;</value>
+            <value>&quot;6R3&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column-instance column='[Calculation_580401431333642244]' derivation='User' name='[usr:Calculation_580401431333642244:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.513854' measure-ordering='alphabetic' measure-percentage='0.486146' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[usr:Calculation_580401431333642244:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;Positivos (&gt;=50\% de Aprobados)&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Sin Nota&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Negativos (&lt;50\% de Aprobados)&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Argentina&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Año_Académico' />
+        <field-sort-custom-order field='Calculation_580401431332925440' />
+        <field-sort-custom-order field='Especialidad' />
+        <field-sort-custom-order field='Curso' />
+        <field-sort-custom-order field='Comisión' />
+        <field-sort-custom-order field='Materia' />
+        <field-sort-custom-order field='Nota' />
+        <field-sort-custom-order field='Calculation_580401431333642244' />
+        <field-sort-custom-order field='Calculation_580401431333449731' />
+        <field-sort-custom-order field='Calculation_580401431333277698' />
+        <field-sort-custom-order field='Calculation_580401431333007361' />
+      </field-sort-info>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Semaforo Tablero'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Estado académico del estudiante a &lt;</run>
+            <run>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[mn:Calculation_580401431332925440:ok]</run>
+            <run>&gt; de  &lt;</run>
+            <run>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[yr:Calculation_580401431332925440:ok]</run>
+            <run>&gt; por Nivel </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Semaforo' name='federated.0hijn0r0q56b9u1guhsp10fpbuv6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hijn0r0q56b9u1guhsp10fpbuv6'>
+            <column caption='Hoy' datatype='date' name='[Calculation_580401431332925440]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='TODAY()' />
+            </column>
+            <column caption='Positivos (&gt;=50% de Aprobados)' datatype='integer' name='[Calculation_580401431333007361]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='sum(IF Nota &gt;3 THEN 1 END)' />
+            </column>
+            <column caption='Negativos (&lt;50% de Aprobados)' datatype='integer' name='[Calculation_580401431333277698]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='sum(IF [Nota] &lt;4 and [Nota]&gt;0 THEN 1 END)' />
+            </column>
+            <column caption='Sin Nota' datatype='integer' name='[Calculation_580401431333449731]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='sum(if (ISNULL([Nota])) OR ([Nota] = 0) THEN 1 END)' />
+            </column>
+            <column caption='Semaforo' datatype='string' name='[Calculation_580401431333642244]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_580401431333277698] &gt; [Calculation_580401431333007361] THEN &quot;Negativos (&lt;50% de Aprobados)&quot;&#13;&#10;ELSE IF [Calculation_580401431333449731]&lt; [Calculation_580401431333007361] or [Calculation_580401431333007361]&gt;0 THEN &quot;Positivos (&gt;=50% de Aprobados)&quot;&#13;&#10;ELSE &quot;Sin Nota&quot;&#13;&#10;END&#13;&#10;END' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[Comisión]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Curso]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Especialidad]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Materia]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Nivel]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Curso]' new-bin='true'>
+                <bin default-name='false' value='&quot;1º Año&quot;'>
+                  <value>&quot;1C1&quot;</value>
+                  <value>&quot;1C2&quot;</value>
+                  <value>&quot;1C3&quot;</value>
+                  <value>&quot;1D1&quot;</value>
+                  <value>&quot;1D2&quot;</value>
+                  <value>&quot;1D3&quot;</value>
+                  <value>&quot;1D4&quot;</value>
+                  <value>&quot;1D5&quot;</value>
+                  <value>&quot;1D6&quot;</value>
+                  <value>&quot;1D7&quot;</value>
+                  <value>&quot;1H10&quot;</value>
+                  <value>&quot;1H20&quot;</value>
+                  <value>&quot;1H22&quot;</value>
+                  <value>&quot;1H9&quot;</value>
+                  <value>&quot;1K1&quot;</value>
+                  <value>&quot;1K10&quot;</value>
+                  <value>&quot;1K11&quot;</value>
+                  <value>&quot;1K12&quot;</value>
+                  <value>&quot;1K13&quot;</value>
+                  <value>&quot;1K14&quot;</value>
+                  <value>&quot;1K2&quot;</value>
+                  <value>&quot;1K3&quot;</value>
+                  <value>&quot;1K4&quot;</value>
+                  <value>&quot;1K5&quot;</value>
+                  <value>&quot;1K50&quot;</value>
+                  <value>&quot;1K6&quot;</value>
+                  <value>&quot;1K7&quot;</value>
+                  <value>&quot;1K8&quot;</value>
+                  <value>&quot;1K9&quot;</value>
+                  <value>&quot;1Q1&quot;</value>
+                  <value>&quot;1R1&quot;</value>
+                  <value>&quot;1R3&quot;</value>
+                  <value>&quot;1R4&quot;</value>
+                  <value>&quot;1R5&quot;</value>
+                  <value>&quot;1R7&quot;</value>
+                  <value>&quot;1S1&quot;</value>
+                  <value>&quot;1S2&quot;</value>
+                  <value>&quot;1S3&quot;</value>
+                  <value>&quot;1S4&quot;</value>
+                  <value>&quot;1T1&quot;</value>
+                  <value>&quot;1T50&quot;</value>
+                  <value>&quot;1V1&quot;</value>
+                  <value>&quot;1V2&quot;</value>
+                  <value>&quot;1V3&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;2º Año&quot;'>
+                  <value>&quot;2C1&quot;</value>
+                  <value>&quot;2C2&quot;</value>
+                  <value>&quot;2C50&quot;</value>
+                  <value>&quot;2D1&quot;</value>
+                  <value>&quot;2D2&quot;</value>
+                  <value>&quot;2D3&quot;</value>
+                  <value>&quot;2D4&quot;</value>
+                  <value>&quot;2D50&quot;</value>
+                  <value>&quot;2K1&quot;</value>
+                  <value>&quot;2K10&quot;</value>
+                  <value>&quot;2K11&quot;</value>
+                  <value>&quot;2K2&quot;</value>
+                  <value>&quot;2K3&quot;</value>
+                  <value>&quot;2K4&quot;</value>
+                  <value>&quot;2K5&quot;</value>
+                  <value>&quot;2K6&quot;</value>
+                  <value>&quot;2K7&quot;</value>
+                  <value>&quot;2K8&quot;</value>
+                  <value>&quot;2K9&quot;</value>
+                  <value>&quot;2Q1&quot;</value>
+                  <value>&quot;2Q50&quot;</value>
+                  <value>&quot;2R1&quot;</value>
+                  <value>&quot;2R2&quot;</value>
+                  <value>&quot;2R3&quot;</value>
+                  <value>&quot;2R4&quot;</value>
+                  <value>&quot;2R50&quot;</value>
+                  <value>&quot;2S1&quot;</value>
+                  <value>&quot;2S2&quot;</value>
+                  <value>&quot;2S50&quot;</value>
+                  <value>&quot;2T1&quot;</value>
+                  <value>&quot;2V1&quot;</value>
+                  <value>&quot;2V50&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;3º Año&quot;'>
+                  <value>&quot;3C1&quot;</value>
+                  <value>&quot;3C50&quot;</value>
+                  <value>&quot;3D1&quot;</value>
+                  <value>&quot;3D2&quot;</value>
+                  <value>&quot;3D3&quot;</value>
+                  <value>&quot;3K1&quot;</value>
+                  <value>&quot;3K12&quot;</value>
+                  <value>&quot;3K17&quot;</value>
+                  <value>&quot;3K1A&quot;</value>
+                  <value>&quot;3K2&quot;</value>
+                  <value>&quot;3K3&quot;</value>
+                  <value>&quot;3K3A&quot;</value>
+                  <value>&quot;3K4&quot;</value>
+                  <value>&quot;3K4A&quot;</value>
+                  <value>&quot;3K5&quot;</value>
+                  <value>&quot;3K50&quot;</value>
+                  <value>&quot;3K6&quot;</value>
+                  <value>&quot;3K7&quot;</value>
+                  <value>&quot;3Q1&quot;</value>
+                  <value>&quot;3R1&quot;</value>
+                  <value>&quot;3R2&quot;</value>
+                  <value>&quot;3R3&quot;</value>
+                  <value>&quot;3R4&quot;</value>
+                  <value>&quot;3R50&quot;</value>
+                  <value>&quot;3S2&quot;</value>
+                  <value>&quot;3S3&quot;</value>
+                  <value>&quot;3T1&quot;</value>
+                  <value>&quot;3V1&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;4º Año&quot;'>
+                  <value>&quot;4C1&quot;</value>
+                  <value>&quot;4D1&quot;</value>
+                  <value>&quot;4D2&quot;</value>
+                  <value>&quot;4D3&quot;</value>
+                  <value>&quot;4D50&quot;</value>
+                  <value>&quot;4K1&quot;</value>
+                  <value>&quot;4K2&quot;</value>
+                  <value>&quot;4K3&quot;</value>
+                  <value>&quot;4K4&quot;</value>
+                  <value>&quot;4K4.&quot;</value>
+                  <value>&quot;4K5&quot;</value>
+                  <value>&quot;4K6&quot;</value>
+                  <value>&quot;4Q1&quot;</value>
+                  <value>&quot;4Q50&quot;</value>
+                  <value>&quot;4R1&quot;</value>
+                  <value>&quot;4R2&quot;</value>
+                  <value>&quot;4S1&quot;</value>
+                  <value>&quot;4S2&quot;</value>
+                  <value>&quot;4T1&quot;</value>
+                  <value>&quot;4V1&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;5º Año&quot;'>
+                  <value>&quot;5C1&quot;</value>
+                  <value>&quot;5C1A&quot;</value>
+                  <value>&quot;5C1B&quot;</value>
+                  <value>&quot;5D1&quot;</value>
+                  <value>&quot;5D1.&quot;</value>
+                  <value>&quot;5D2&quot;</value>
+                  <value>&quot;5D3&quot;</value>
+                  <value>&quot;5K1&quot;</value>
+                  <value>&quot;5K1_&quot;</value>
+                  <value>&quot;5K1.&quot;</value>
+                  <value>&quot;5K2&quot;</value>
+                  <value>&quot;5K2.&quot;</value>
+                  <value>&quot;5K3&quot;</value>
+                  <value>&quot;5K3_&quot;</value>
+                  <value>&quot;5K4&quot;</value>
+                  <value>&quot;5K4_&quot;</value>
+                  <value>&quot;5K4.&quot;</value>
+                  <value>&quot;5Q1&quot;</value>
+                  <value>&quot;5R1&quot;</value>
+                  <value>&quot;5R2&quot;</value>
+                  <value>&quot;5S1&quot;</value>
+                  <value>&quot;5T1&quot;</value>
+                  <value>&quot;5V1&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;6º Año&quot;'>
+                  <value>&quot;6R1&quot;</value>
+                  <value>&quot;6R2&quot;</value>
+                  <value>&quot;6R3&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Nota]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Curso]' derivation='Attribute' name='[attr:Curso:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_580401431332925440]' derivation='Month' name='[mn:Calculation_580401431332925440:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Comisión]' derivation='None' name='[none:Comisión:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Especialidad]' derivation='None' name='[none:Especialidad:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Materia]' derivation='None' name='[none:Materia:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_580401431333007361]' derivation='User' name='[usr:Calculation_580401431333007361:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_580401431333277698]' derivation='User' name='[usr:Calculation_580401431333277698:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_580401431333449731]' derivation='User' name='[usr:Calculation_580401431333449731:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_580401431333642244]' derivation='User' name='[usr:Calculation_580401431333642244:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_580401431332925440]' derivation='Year' name='[yr:Calculation_580401431332925440:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[Nivel]'>
+            <groupfilter from='&quot;1º Año&quot;' function='range' level='[Nivel]' to='&quot;5º Año&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[none:Especialidad:nk]'>
+            <groupfilter function='member' level='[none:Especialidad:nk]' member='&quot;Ingeniería en Sistemas de Información&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[none:Especialidad:nk]</column>
+            <column>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[Nivel]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[none:Materia:nk]' value='196' />
+            <format attr='width' field='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[Nivel]' value='23' />
+            <format attr='width-header' value='10' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[Nivel]' value='-90' />
+            <format attr='font-size' field='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[Nivel]' value='12' />
+            <format attr='font-weight' field='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[Nivel]' value='bold' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-size' scope='cols' value='3' />
+            <format attr='stroke-size' scope='rows' value='1' />
+            <format attr='div-level' scope='cols' value='1' />
+            <format attr='div-level' scope='rows' value='2' />
+            <format attr='stroke-color' scope='rows' value='#e6e6e6' />
+            <format attr='stroke-color' scope='cols' value='#d4d4d4' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='stroke-size' scope='cols' value='3' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='color' value='#ffffff' />
+            <format attr='border-color' value='#002255' />
+            <format attr='border-style' value='solid' />
+            <format attr='background-color' value='#002255' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[usr:Calculation_580401431333642244:nk]' />
+              <tooltip column='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[usr:Calculation_580401431333007361:qk]' />
+              <tooltip column='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[usr:Calculation_580401431333277698:qk]' />
+              <tooltip column='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[usr:Calculation_580401431333449731:qk]' />
+              <tooltip column='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[sum:Number of Records:qk]' />
+              <tooltip column='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[attr:Curso:nk]' />
+              <lod column='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[mn:Calculation_580401431332925440:ok]' />
+              <lod column='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[yr:Calculation_580401431332925440:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0hijn0r0q56b9u1guhsp10fpbuv6].[Nivel] / [federated.0hijn0r0q56b9u1guhsp10fpbuv6].[none:Materia:nk])</rows>
+        <cols>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[none:Comisión:ok]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Monitor de Estados Académicos Intermedios'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='Semaforo' name='federated.0hijn0r0q56b9u1guhsp10fpbuv6' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0hijn0r0q56b9u1guhsp10fpbuv6'>
+        <column datatype='string' name='[Curso]' role='dimension' type='nominal' />
+        <column datatype='string' name='[Especialidad]' role='dimension' type='nominal' />
+        <column datatype='string' name='[Nivel]' role='dimension' type='nominal'>
+          <calculation class='categorical-bin' column='[Curso]' new-bin='true'>
+            <bin default-name='false' value='&quot;1º Año&quot;'>
+              <value>&quot;1C1&quot;</value>
+              <value>&quot;1C2&quot;</value>
+              <value>&quot;1C3&quot;</value>
+              <value>&quot;1D1&quot;</value>
+              <value>&quot;1D2&quot;</value>
+              <value>&quot;1D3&quot;</value>
+              <value>&quot;1D4&quot;</value>
+              <value>&quot;1D5&quot;</value>
+              <value>&quot;1D6&quot;</value>
+              <value>&quot;1D7&quot;</value>
+              <value>&quot;1H10&quot;</value>
+              <value>&quot;1H20&quot;</value>
+              <value>&quot;1H22&quot;</value>
+              <value>&quot;1H9&quot;</value>
+              <value>&quot;1K1&quot;</value>
+              <value>&quot;1K10&quot;</value>
+              <value>&quot;1K11&quot;</value>
+              <value>&quot;1K12&quot;</value>
+              <value>&quot;1K13&quot;</value>
+              <value>&quot;1K14&quot;</value>
+              <value>&quot;1K2&quot;</value>
+              <value>&quot;1K3&quot;</value>
+              <value>&quot;1K4&quot;</value>
+              <value>&quot;1K5&quot;</value>
+              <value>&quot;1K50&quot;</value>
+              <value>&quot;1K6&quot;</value>
+              <value>&quot;1K7&quot;</value>
+              <value>&quot;1K8&quot;</value>
+              <value>&quot;1K9&quot;</value>
+              <value>&quot;1Q1&quot;</value>
+              <value>&quot;1R1&quot;</value>
+              <value>&quot;1R3&quot;</value>
+              <value>&quot;1R4&quot;</value>
+              <value>&quot;1R5&quot;</value>
+              <value>&quot;1R7&quot;</value>
+              <value>&quot;1S1&quot;</value>
+              <value>&quot;1S2&quot;</value>
+              <value>&quot;1S3&quot;</value>
+              <value>&quot;1S4&quot;</value>
+              <value>&quot;1T1&quot;</value>
+              <value>&quot;1T50&quot;</value>
+              <value>&quot;1V1&quot;</value>
+              <value>&quot;1V2&quot;</value>
+              <value>&quot;1V3&quot;</value>
+            </bin>
+            <bin default-name='false' value='&quot;2º Año&quot;'>
+              <value>&quot;2C1&quot;</value>
+              <value>&quot;2C2&quot;</value>
+              <value>&quot;2C50&quot;</value>
+              <value>&quot;2D1&quot;</value>
+              <value>&quot;2D2&quot;</value>
+              <value>&quot;2D3&quot;</value>
+              <value>&quot;2D4&quot;</value>
+              <value>&quot;2D50&quot;</value>
+              <value>&quot;2K1&quot;</value>
+              <value>&quot;2K10&quot;</value>
+              <value>&quot;2K11&quot;</value>
+              <value>&quot;2K2&quot;</value>
+              <value>&quot;2K3&quot;</value>
+              <value>&quot;2K4&quot;</value>
+              <value>&quot;2K5&quot;</value>
+              <value>&quot;2K6&quot;</value>
+              <value>&quot;2K7&quot;</value>
+              <value>&quot;2K8&quot;</value>
+              <value>&quot;2K9&quot;</value>
+              <value>&quot;2Q1&quot;</value>
+              <value>&quot;2Q50&quot;</value>
+              <value>&quot;2R1&quot;</value>
+              <value>&quot;2R2&quot;</value>
+              <value>&quot;2R3&quot;</value>
+              <value>&quot;2R4&quot;</value>
+              <value>&quot;2R50&quot;</value>
+              <value>&quot;2S1&quot;</value>
+              <value>&quot;2S2&quot;</value>
+              <value>&quot;2S50&quot;</value>
+              <value>&quot;2T1&quot;</value>
+              <value>&quot;2V1&quot;</value>
+              <value>&quot;2V50&quot;</value>
+            </bin>
+            <bin default-name='false' value='&quot;3º Año&quot;'>
+              <value>&quot;3C1&quot;</value>
+              <value>&quot;3C50&quot;</value>
+              <value>&quot;3D1&quot;</value>
+              <value>&quot;3D2&quot;</value>
+              <value>&quot;3D3&quot;</value>
+              <value>&quot;3K1&quot;</value>
+              <value>&quot;3K12&quot;</value>
+              <value>&quot;3K17&quot;</value>
+              <value>&quot;3K1A&quot;</value>
+              <value>&quot;3K2&quot;</value>
+              <value>&quot;3K3&quot;</value>
+              <value>&quot;3K3A&quot;</value>
+              <value>&quot;3K4&quot;</value>
+              <value>&quot;3K4A&quot;</value>
+              <value>&quot;3K5&quot;</value>
+              <value>&quot;3K50&quot;</value>
+              <value>&quot;3K6&quot;</value>
+              <value>&quot;3K7&quot;</value>
+              <value>&quot;3Q1&quot;</value>
+              <value>&quot;3R1&quot;</value>
+              <value>&quot;3R2&quot;</value>
+              <value>&quot;3R3&quot;</value>
+              <value>&quot;3R4&quot;</value>
+              <value>&quot;3R50&quot;</value>
+              <value>&quot;3S2&quot;</value>
+              <value>&quot;3S3&quot;</value>
+              <value>&quot;3T1&quot;</value>
+              <value>&quot;3V1&quot;</value>
+            </bin>
+            <bin default-name='false' value='&quot;4º Año&quot;'>
+              <value>&quot;4C1&quot;</value>
+              <value>&quot;4D1&quot;</value>
+              <value>&quot;4D2&quot;</value>
+              <value>&quot;4D3&quot;</value>
+              <value>&quot;4D50&quot;</value>
+              <value>&quot;4K1&quot;</value>
+              <value>&quot;4K2&quot;</value>
+              <value>&quot;4K3&quot;</value>
+              <value>&quot;4K4&quot;</value>
+              <value>&quot;4K4.&quot;</value>
+              <value>&quot;4K5&quot;</value>
+              <value>&quot;4K6&quot;</value>
+              <value>&quot;4Q1&quot;</value>
+              <value>&quot;4Q50&quot;</value>
+              <value>&quot;4R1&quot;</value>
+              <value>&quot;4R2&quot;</value>
+              <value>&quot;4S1&quot;</value>
+              <value>&quot;4S2&quot;</value>
+              <value>&quot;4T1&quot;</value>
+              <value>&quot;4V1&quot;</value>
+            </bin>
+            <bin default-name='false' value='&quot;5º Año&quot;'>
+              <value>&quot;5C1&quot;</value>
+              <value>&quot;5C1A&quot;</value>
+              <value>&quot;5C1B&quot;</value>
+              <value>&quot;5D1&quot;</value>
+              <value>&quot;5D1.&quot;</value>
+              <value>&quot;5D2&quot;</value>
+              <value>&quot;5D3&quot;</value>
+              <value>&quot;5K1&quot;</value>
+              <value>&quot;5K1_&quot;</value>
+              <value>&quot;5K1.&quot;</value>
+              <value>&quot;5K2&quot;</value>
+              <value>&quot;5K2.&quot;</value>
+              <value>&quot;5K3&quot;</value>
+              <value>&quot;5K3_&quot;</value>
+              <value>&quot;5K4&quot;</value>
+              <value>&quot;5K4_&quot;</value>
+              <value>&quot;5K4.&quot;</value>
+              <value>&quot;5Q1&quot;</value>
+              <value>&quot;5R1&quot;</value>
+              <value>&quot;5R2&quot;</value>
+              <value>&quot;5S1&quot;</value>
+              <value>&quot;5T1&quot;</value>
+              <value>&quot;5V1&quot;</value>
+            </bin>
+            <bin default-name='false' value='&quot;6º Año&quot;'>
+              <value>&quot;6R1&quot;</value>
+              <value>&quot;6R2&quot;</value>
+              <value>&quot;6R3&quot;</value>
+            </bin>
+          </calculation>
+        </column>
+        <column-instance column='[Especialidad]' derivation='None' name='[none:Especialidad:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='11785' id='1' param='horz' type='layout-flow' w='102587' x='-2587' y='-458'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#002255' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='8696' id='2' type='text' w='63581' x='17291' y='1487'>
+          <formatted-text>
+            <run bold='true' fontcolor='#ffffff' fontsize='20'>Monitor de Estados Académicos Intermedios</run>
+          </formatted-text>
+        </zone>
+        <zone h='9153' id='3' is-centered='0' is-scaled='1' param='C:/SMAE/Imagenes/SMAEChico.png' type='bitmap' w='12594' x='885' y='1716' />
+        <zone h='97368' id='4' param='vert' type='layout-flow' w='16474' x='-136' y='11098'>
+          <zone h='6637' id='7' mode='dropdown' name='Semaforo Tablero' param='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[none:Especialidad:nk]' type='filter' values='database' w='16474' x='-136' y='11098'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='19137' id='8' name='Semaforo Tablero' param='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[Nivel]' type='filter' values='database' w='16474' x='-136' y='17735'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#002255' />
+          </zone-style>
+        </zone>
+        <zone h='78872' id='5' name='Semaforo Tablero' w='82504' x='16559' y='19137' />
+        <zone h='14381' id='6' name='Semaforo Tablero' pane-specification-id='0' param='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[usr:Calculation_580401431333642244:nk]' type='color' w='14277' x='76946' y='11504' />
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='Monitor de Estados Académicos Intermedios'>
+      <viewpoints>
+        <viewpoint name='Semaforo Tablero'>
+          <highlight>
+            <color-one-way>
+              <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[usr:Calculation_580401431333642244:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='worksheet' hidden='true' name='Semaforo Tablero'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card param='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[Nivel]' type='filter' />
+            <card mode='dropdown' param='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[none:Especialidad:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[usr:Calculation_580401431333642244:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[none:Comisión:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[Nivel]</field>
+                    <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[none:Materia:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[Nivel]</field>
+                  <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[none:Comisión:ok]</field>
+                  <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[none:Materia:nk]</field>
+                  <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[sum:Number of Records:qk]</field>
+                  <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[usr:Calculation_580401431333007361:qk]</field>
+                  <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[usr:Calculation_580401431333277698:qk]</field>
+                  <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[usr:Calculation_580401431333449731:qk]</field>
+                  <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[attr:Curso:nk]</field>
+                  <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[usr:Calculation_580401431333642244:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;1º Año&quot;</value>
+                <value>4</value>
+                <value>&quot;Matemática Discreta&quot;</value>
+                <value>96</value>
+                <value>31</value>
+                <value>44</value>
+                <value>21</value>
+                <value>&quot;1K4&quot;</value>
+                <value>&quot;Negativos (&lt;50\% de Aprobados)&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[Nivel]</field>
+            <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[none:Comisión:ok]</field>
+            <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[none:Curso:nk]</field>
+            <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[none:Especialidad:nk]</field>
+            <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[none:Materia:nk]</field>
+            <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[usr:Calculation_580401431333642244:nk]</field>
+            <field>[federated.0hijn0r0q56b9u1guhsp10fpbuv6].[yr:Calculation_580401431332925440:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Monitor de Estados Académicos Intermedios' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

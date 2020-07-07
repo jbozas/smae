@@ -1,0 +1,2274 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20181.18.0706.1237                               -->
+<workbook original-version='18.1' source-build='2018.1.3 (20181.18.0706.1237)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Examenes' inline='true' name='federated.0domqbx1829ld21bfxrpk06ix8a7' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Examenes' name='textscan.19pq8uh1f0c4ox16z1yk20kqjlsa'>
+            <connection class='textscan' directory='C:/SMAE/data/1' filename='Examenes.txt' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.19pq8uh1f0c4ox16z1yk20kqjlsa' name='Examenes.txt' table='[Examenes#txt]' type='table'>
+          <columns character-set='windows-1252' header='yes' locale='es_AR' separator=';'>
+            <column datatype='string' name='Nivel' ordinal='0' />
+            <column datatype='string' name='Especialidad' ordinal='1' />
+            <column datatype='datetime' name='Fecha_Examen' ordinal='2' />
+            <column datatype='string' name='Turno' ordinal='3' />
+            <column datatype='string' name='Materia' ordinal='4' />
+            <column datatype='integer' name='Nota' ordinal='5' />
+            <column datatype='integer' name='Año_Académico' ordinal='6' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Examenes.txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;windows-1252&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_AR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Nivel</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Nivel]</local-name>
+            <parent-name>[Examenes.txt]</parent-name>
+            <remote-alias>Nivel</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Especialidad</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Especialidad]</local-name>
+            <parent-name>[Examenes.txt]</parent-name>
+            <remote-alias>Especialidad</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fecha_Examen</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Fecha_Examen]</local-name>
+            <parent-name>[Examenes.txt]</parent-name>
+            <remote-alias>Fecha_Examen</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Turno</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Turno]</local-name>
+            <parent-name>[Examenes.txt]</parent-name>
+            <remote-alias>Turno</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Materia</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Materia]</local-name>
+            <parent-name>[Examenes.txt]</parent-name>
+            <remote-alias>Materia</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Nota</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Nota]</local-name>
+            <parent-name>[Examenes.txt]</parent-name>
+            <remote-alias>Nota</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Año_Académico</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Año_Académico]</local-name>
+            <parent-name>[Examenes.txt]</parent-name>
+            <remote-alias>Año_Académico</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Año Académico' datatype='integer' name='[Año_Académico]' role='dimension' type='ordinal' />
+      <column caption='Estado' datatype='string' name='[Calculation_904942078879764480]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Año_Académico] &lt; 2017 AND [Nota] &lt; 4 THEN &quot;No Aprobado&quot;&#13;&#10;ELSEIF  [Año_Académico] &lt; 2017 AND [Nota] &gt;= 4 AND [Nota]&lt; 12 THEN &quot;Aprobado&quot;&#13;&#10;ELSEIF  [Año_Académico] &lt; 2017 AND [Nota] = 13 THEN &quot;Ausente&quot;&#13;&#10;ELSEIF [Año_Académico] &gt;= 2017 AND [Nota] &lt; 6 THEN &quot;No Aprobado&quot;&#13;&#10;ELSEIF  [Año_Académico] &gt;= 2017 AND [Nota] &gt;= 6 AND [Nota]&lt; 12 THEN &quot;Aprobado&quot;&#13;&#10;ELSEIF  [Año_Académico] &gt;= 2017 AND [Nota] = 13 THEN &quot;Ausente&quot;&#13;&#10;END' />
+      </column>
+      <column caption='% Ausentes' datatype='real' name='[Calculation_904942078880153601]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(if [Calculation_904942078879764480]=&quot;Ausente&quot; then 1 else 0 end)/COUNT([Nota])' />
+      </column>
+      <column caption='Ausentes' datatype='string' name='[Calculation_904942078880296962]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_904942078879764480] = &quot;Ausente&quot; THEN &quot;Ausente&quot;&#13;&#10;ELSE &quot; &quot;&#13;&#10;END' />
+      </column>
+      <column caption='Cantidad' datatype='integer' name='[Calculation_904942078880530435]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([Nota])' />
+      </column>
+      <column caption='Aprobados' datatype='string' name='[Calculation_904942078880649220]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_904942078879764480] = &quot;Aprobado&quot; THEN &quot;Aprobado&quot;&#13;&#10;ELSE &quot; &quot;&#13;&#10;END' />
+      </column>
+      <column caption='% Aprobados' datatype='real' name='[Calculation_904942078880899077]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(if [Calculation_904942078879764480]=&quot;Aprobado&quot; then 1 else 0 end)/COUNT([Nota])' />
+      </column>
+      <column caption='No Aprobados' datatype='string' name='[Calculation_904942078881009670]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_904942078879764480] = &quot;No Aprobado&quot; THEN &quot;No Aprobado&quot;&#13;&#10;ELSE &quot; &quot;&#13;&#10;END' />
+      </column>
+      <column caption='% No Aprobados' datatype='real' name='[Calculation_904942078881067015]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(if [Calculation_904942078879764480]=&quot;No Aprobado&quot; then 1 else 0 end)/COUNT([Nota])' />
+      </column>
+      <column caption='%' datatype='real' name='[Calculation_904942078882443272]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='([Calculation_904942078880530435] / TOTAL([Calculation_904942078880530435]))*100'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Cálculo1' datatype='integer' name='[Calculation_904942078882549769]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='ZN(SUM([Nota])) - LOOKUP(ZN(SUM([Nota])), -1)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Cálculo2' datatype='integer' name='[Calculation_904942078882607114]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RUNNING_SUM(COUNT([Nota]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Cálculo3' datatype='real' name='[Calculation_904942078882664459]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_904942078880530435] / TOTAL([Calculation_904942078880530435])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Fecha Examen' datatype='datetime' name='[Fecha_Examen]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[Materia]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Nivel]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Turnos (grupo)' datatype='string' name='[Turno (grupo)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Turno]' new-bin='true'>
+          <bin default-name='false' value='&quot;10mo&quot;'>
+            <value>&quot;13&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;1er&quot;'>
+            <value>&quot;4&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;2do&quot;'>
+            <value>&quot;5&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;3ro&quot;'>
+            <value>&quot;6&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;4to&quot;'>
+            <value>&quot;7&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;5to&quot;'>
+            <value>&quot;8&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;6to&quot;'>
+            <value>&quot;9&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;7mo&quot;'>
+            <value>&quot;10&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;8vo&quot;'>
+            <value>&quot;11&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;9no&quot;'>
+            <value>&quot;12&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Esp&quot;'>
+            <value>&quot;0&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Turno]' role='dimension' type='nominal' />
+      <column-instance column='[Calculation_904942078879764480]' derivation='None' name='[none:Calculation_904942078879764480:nk]' pivot='key' type='nominal' />
+      <group caption='Acción (Estado)' hidden='true' name='[Action (Estado)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Calculation_904942078879764480]' />
+        </groupfilter>
+      </group>
+      <group caption='Acción (Estado,Materia,Nivel)' hidden='true' name='[Action (Estado,Materia,Nivel)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Calculation_904942078879764480]' />
+          <groupfilter function='level-members' level='[Materia]' />
+          <groupfilter function='level-members' level='[Nivel]' />
+        </groupfilter>
+      </group>
+      <group caption='Acción (Estado,Turno)' hidden='true' name='[Action (Estado,Turno)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Calculation_904942078879764480]' />
+          <groupfilter function='level-members' level='[Turno]' />
+        </groupfilter>
+      </group>
+      <layout dim-ordering='alphabetic' dim-percentage='0.513854' measure-ordering='alphabetic' measure-percentage='0.486146' rowDisplayCount='1000' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_904942078879764480:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Aprobado&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;No Aprobado&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Ausente&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Argentina&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Nivel' />
+        <field-sort-custom-order field='Especialidad' />
+        <field-sort-custom-order field='Fecha_Examen' />
+        <field-sort-custom-order field='Turno' />
+        <field-sort-custom-order field='Materia' />
+        <field-sort-custom-order field='Nota' />
+        <field-sort-custom-order field='Calculation_904942078880530435' />
+        <field-sort-custom-order field='Calculation_904942078880296962' />
+        <field-sort-custom-order field='Calculation_904942078879764480' />
+        <field-sort-custom-order field='Calculation_904942078881009670' />
+        <field-sort-custom-order field='Calculation_904942078881067015' />
+        <field-sort-custom-order field='Calculation_904942078880899077' />
+        <field-sort-custom-order field='Calculation_904942078882664459' />
+        <field-sort-custom-order field='Calculation_904942078880649220' />
+        <field-sort-custom-order field='Calculation_904942078882607114' />
+        <field-sort-custom-order field='Calculation_904942078882549769' />
+        <field-sort-custom-order field='Año_Académico' />
+        <field-sort-custom-order field='Calculation_904942078882443272' />
+        <field-sort-custom-order field='Calculation_904942078880153601' />
+      </field-sort-info>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filtro 1 (generado)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Tablero Exámenes Porcentajes' type='sheet' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Tablero Exámenes Porcentajes' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Examenes'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Resultados &lt;</run>
+            <run>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Año_Académico:ok]</run>
+            <run>&gt; de Examen - &lt;</run>
+            <run>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Especialidad:nk]</run>
+            <run>&gt; </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Examenes' name='federated.0domqbx1829ld21bfxrpk06ix8a7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0domqbx1829ld21bfxrpk06ix8a7'>
+            <column caption='Año Académico' datatype='integer' name='[Año_Académico]' role='dimension' type='ordinal' />
+            <column caption='Estado' datatype='string' name='[Calculation_904942078879764480]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Año_Académico] &lt; 2017 AND [Nota] &lt; 4 THEN &quot;No Aprobado&quot;&#13;&#10;ELSEIF  [Año_Académico] &lt; 2017 AND [Nota] &gt;= 4 AND [Nota]&lt; 12 THEN &quot;Aprobado&quot;&#13;&#10;ELSEIF  [Año_Académico] &lt; 2017 AND [Nota] = 13 THEN &quot;Ausente&quot;&#13;&#10;ELSEIF [Año_Académico] &gt;= 2017 AND [Nota] &lt; 6 THEN &quot;No Aprobado&quot;&#13;&#10;ELSEIF  [Año_Académico] &gt;= 2017 AND [Nota] &gt;= 6 AND [Nota]&lt; 12 THEN &quot;Aprobado&quot;&#13;&#10;ELSEIF  [Año_Académico] &gt;= 2017 AND [Nota] = 13 THEN &quot;Ausente&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='string' name='[Especialidad]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Materia]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Nota]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Turno]' role='dimension' type='nominal' />
+            <column-instance column='[Nota]' derivation='Count' name='[cnt:Nota:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Año_Académico]' derivation='None' name='[none:Año_Académico:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_904942078879764480]' derivation='None' name='[none:Calculation_904942078879764480:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Especialidad]' derivation='None' name='[none:Especialidad:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Materia]' derivation='None' name='[none:Materia:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Turno]' derivation='None' name='[none:Turno:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Año_Académico:ok]'>
+            <groupfilter function='member' level='[none:Año_Académico:ok]' member='2017' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Especialidad:nk]'>
+            <groupfilter function='member' level='[none:Especialidad:nk]' member='&quot;Ingeniería en Sistemas de Información&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Materia:nk]'>
+            <groupfilter function='level-members' level='[none:Materia:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Especialidad:nk]</column>
+            <column>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Año_Académico:ok]</column>
+            <column>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Materia:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]' scope='rows' value='Conteo de Nota x Estado' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height-header' value='21' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='field-labels-decoration'>
+            <format attr='text-orientation' value='0' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' field='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]' value='center' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='background-color' value='#002255' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</rows>
+        <cols>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1658</value>
+                <value>&quot;No Aprobado&quot;</value>
+                <value>&quot;13&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1778</value>
+                <value>&quot;No Aprobado&quot;</value>
+                <value>&quot;12&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1116</value>
+                <value>&quot;No Aprobado&quot;</value>
+                <value>&quot;11&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>4884</value>
+                <value>&quot;No Aprobado&quot;</value>
+                <value>&quot;10&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='4' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2900</value>
+                <value>&quot;No Aprobado&quot;</value>
+                <value>&quot;9&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='5' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1404</value>
+                <value>&quot;No Aprobado&quot;</value>
+                <value>&quot;8&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='6' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2684</value>
+                <value>&quot;No Aprobado&quot;</value>
+                <value>&quot;7&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='7' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1832</value>
+                <value>&quot;No Aprobado&quot;</value>
+                <value>&quot;6&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='8' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>680</value>
+                <value>&quot;No Aprobado&quot;</value>
+                <value>&quot;5&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='9' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1022</value>
+                <value>&quot;No Aprobado&quot;</value>
+                <value>&quot;4&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='14' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>3134</value>
+                <value>&quot;Ausente&quot;</value>
+                <value>&quot;13&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='15' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>3752</value>
+                <value>&quot;Ausente&quot;</value>
+                <value>&quot;12&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='16' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2588</value>
+                <value>&quot;Ausente&quot;</value>
+                <value>&quot;11&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='17' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>8970</value>
+                <value>&quot;Ausente&quot;</value>
+                <value>&quot;10&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='18' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>6598</value>
+                <value>&quot;Ausente&quot;</value>
+                <value>&quot;9&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='19' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>4684</value>
+                <value>&quot;Ausente&quot;</value>
+                <value>&quot;8&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='20' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>5964</value>
+                <value>&quot;Ausente&quot;</value>
+                <value>&quot;7&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='21' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>4684</value>
+                <value>&quot;Ausente&quot;</value>
+                <value>&quot;6&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='22' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2826</value>
+                <value>&quot;Ausente&quot;</value>
+                <value>&quot;5&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='23' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2890</value>
+                <value>&quot;Ausente&quot;</value>
+                <value>&quot;4&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='27' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>86</value>
+                <value>&quot;Ausente&quot;</value>
+                <value>&quot;0&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='28' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>3446</value>
+                <value>&quot;Aprobado&quot;</value>
+                <value>&quot;13&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='29' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>4128</value>
+                <value>&quot;Aprobado&quot;</value>
+                <value>&quot;12&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='30' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>3238</value>
+                <value>&quot;Aprobado&quot;</value>
+                <value>&quot;11&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='31' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>12334</value>
+                <value>&quot;Aprobado&quot;</value>
+                <value>&quot;10&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='32' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>11858</value>
+                <value>&quot;Aprobado&quot;</value>
+                <value>&quot;9&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='33' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>11732</value>
+                <value>&quot;Aprobado&quot;</value>
+                <value>&quot;8&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='34' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>8672</value>
+                <value>&quot;Aprobado&quot;</value>
+                <value>&quot;7&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='35' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>9304</value>
+                <value>&quot;Aprobado&quot;</value>
+                <value>&quot;6&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='36' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>10352</value>
+                <value>&quot;Aprobado&quot;</value>
+                <value>&quot;5&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='37' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>3670</value>
+                <value>&quot;Aprobado&quot;</value>
+                <value>&quot;4&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='41' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                  <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1098</value>
+                <value>&quot;Aprobado&quot;</value>
+                <value>&quot;0&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+    </worksheet>
+    <worksheet name='PieAprobados'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Porcentajes de estados en examen &lt;</run>
+            <run>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Especialidad:nk]</run>
+            <run>&gt; / &lt;</run>
+            <run>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Materia:nk]</run>
+            <run>&gt; / &lt;</run>
+            <run>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Año_Académico:ok]</run>
+            <run>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Examenes' name='federated.0domqbx1829ld21bfxrpk06ix8a7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0domqbx1829ld21bfxrpk06ix8a7'>
+            <column caption='Año Académico' datatype='integer' name='[Año_Académico]' role='dimension' type='ordinal' />
+            <column caption='Estado' datatype='string' name='[Calculation_904942078879764480]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Año_Académico] &lt; 2017 AND [Nota] &lt; 4 THEN &quot;No Aprobado&quot;&#13;&#10;ELSEIF  [Año_Académico] &lt; 2017 AND [Nota] &gt;= 4 AND [Nota]&lt; 12 THEN &quot;Aprobado&quot;&#13;&#10;ELSEIF  [Año_Académico] &lt; 2017 AND [Nota] = 13 THEN &quot;Ausente&quot;&#13;&#10;ELSEIF [Año_Académico] &gt;= 2017 AND [Nota] &lt; 6 THEN &quot;No Aprobado&quot;&#13;&#10;ELSEIF  [Año_Académico] &gt;= 2017 AND [Nota] &gt;= 6 AND [Nota]&lt; 12 THEN &quot;Aprobado&quot;&#13;&#10;ELSEIF  [Año_Académico] &gt;= 2017 AND [Nota] = 13 THEN &quot;Ausente&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Cantidad' datatype='integer' name='[Calculation_904942078880530435]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([Nota])' />
+            </column>
+            <column caption='%' datatype='real' name='[Calculation_904942078882443272]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='([Calculation_904942078880530435] / TOTAL([Calculation_904942078880530435]))*100'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Especialidad]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Materia]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Nivel]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Nota]' role='measure' type='quantitative' />
+            <column-instance column='[Año_Académico]' derivation='None' name='[none:Año_Académico:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_904942078879764480]' derivation='None' name='[none:Calculation_904942078879764480:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Especialidad]' derivation='None' name='[none:Especialidad:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Materia]' derivation='None' name='[none:Materia:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_904942078882443272]' derivation='User' name='[usr:Calculation_904942078882443272:ok]' pivot='key' type='ordinal'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Calculation_904942078882443272]' derivation='User' name='[usr:Calculation_904942078882443272:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0domqbx1829ld21bfxrpk06ix8a7].[Action (Estado,Materia,Nivel)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_904942078879764480]' />
+              <groupfilter function='level-members' level='[Materia]' />
+              <groupfilter function='level-members' level='[Nivel]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]'>
+            <groupfilter function='level-members' level='[none:Calculation_904942078879764480:nk]' user:ui-enumeration='all' user:ui-exclude='true' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</column>
+            <column>[federated.0domqbx1829ld21bfxrpk06ix8a7].[Action (Estado,Materia,Nivel)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='644' />
+            <format attr='width' value='690' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='background-color' value='#002255' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]' />
+              <size column='[federated.0domqbx1829ld21bfxrpk06ix8a7].[usr:Calculation_904942078882443272:qk]' />
+              <text column='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]' />
+              <text column='[federated.0domqbx1829ld21bfxrpk06ix8a7].[usr:Calculation_904942078882443272:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Resumen'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Materias</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Examenes' name='federated.0domqbx1829ld21bfxrpk06ix8a7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0domqbx1829ld21bfxrpk06ix8a7'>
+            <column caption='Año Académico' datatype='integer' name='[Año_Académico]' role='dimension' type='ordinal' />
+            <column caption='Estado' datatype='string' name='[Calculation_904942078879764480]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Año_Académico] &lt; 2017 AND [Nota] &lt; 4 THEN &quot;No Aprobado&quot;&#13;&#10;ELSEIF  [Año_Académico] &lt; 2017 AND [Nota] &gt;= 4 AND [Nota]&lt; 12 THEN &quot;Aprobado&quot;&#13;&#10;ELSEIF  [Año_Académico] &lt; 2017 AND [Nota] = 13 THEN &quot;Ausente&quot;&#13;&#10;ELSEIF [Año_Académico] &gt;= 2017 AND [Nota] &lt; 6 THEN &quot;No Aprobado&quot;&#13;&#10;ELSEIF  [Año_Académico] &gt;= 2017 AND [Nota] &gt;= 6 AND [Nota]&lt; 12 THEN &quot;Aprobado&quot;&#13;&#10;ELSEIF  [Año_Académico] &gt;= 2017 AND [Nota] = 13 THEN &quot;Ausente&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='string' name='[Especialidad]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Materia]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Nivel]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Nota]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Turno]' role='dimension' type='nominal' />
+            <column-instance column='[Nota]' derivation='Count' name='[cnt:Nota:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Año_Académico]' derivation='None' name='[none:Año_Académico:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_904942078879764480]' derivation='None' name='[none:Calculation_904942078879764480:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Especialidad]' derivation='None' name='[none:Especialidad:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Materia]' derivation='None' name='[none:Materia:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Nivel]' derivation='None' name='[none:Nivel:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Turno]' derivation='None' name='[none:Turno:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0domqbx1829ld21bfxrpk06ix8a7].[Action (Estado)]'>
+            <groupfilter function='level-members' level='[Calculation_904942078879764480]' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Año_Académico:ok]'>
+            <groupfilter function='member' level='[none:Año_Académico:ok]' member='2017' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Especialidad:nk]'>
+            <groupfilter function='member' level='[none:Especialidad:nk]' member='&quot;Ingeniería en Sistemas de Información&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Materia:nk]'>
+            <groupfilter function='level-members' level='[none:Materia:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]'>
+            <groupfilter function='level-members' level='[none:Turno:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Especialidad:nk]</column>
+            <column>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Materia:nk]</column>
+            <column>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Año_Académico:ok]</column>
+            <column>[federated.0domqbx1829ld21bfxrpk06ix8a7].[Action (Estado)]</column>
+            <column>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Materia:nk]' value='240' />
+            <format attr='width' field='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Nivel:nk]' value='52' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='color' value='#ffffff' />
+            <format attr='background-color' value='#002255' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]' />
+              <text column='[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Nivel:nk] / [federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Materia:nk])</rows>
+        <cols>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Tablero Exámenes'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='Examenes' name='federated.0domqbx1829ld21bfxrpk06ix8a7' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0domqbx1829ld21bfxrpk06ix8a7'>
+        <column caption='Año Académico' datatype='integer' name='[Año_Académico]' role='dimension' type='ordinal' />
+        <column datatype='string' name='[Especialidad]' role='dimension' type='nominal' />
+        <column datatype='string' name='[Materia]' role='dimension' type='nominal' />
+        <column-instance column='[Año_Académico]' derivation='None' name='[none:Año_Académico:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[Especialidad]' derivation='None' name='[none:Especialidad:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Materia]' derivation='None' name='[none:Materia:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='12014' id='1' param='vert' type='layout-flow' w='100068' x='-204' y='0'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#002255' />
+          </zone-style>
+        </zone>
+        <zone h='7895' id='8' is-centered='0' is-scaled='1' param='C:/SMAE/Imagenes/SMAEChico.png' type='bitmap' w='11845' x='1566' y='2174' />
+        <zone forceUpdate='true' h='7080' id='9' type='text' w='76887' x='15331' y='4204'>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontsize='22'>Condición de Examen por Turno</run>
+          </formatted-text>
+        </zone>
+        <zone h='84668' id='10' name='Examenes' w='68618' x='16065' y='13158' />
+        <zone h='16704' id='14' name='Examenes' pane-specification-id='0' param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]' type='color' w='9538' x='86366' y='34956' />
+        <zone h='94966' id='15' param='vert' type='layout-flow' w='14772' x='-272' y='10870'>
+          <zone h='22456' id='13' name='Examenes' param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Especialidad:nk]' type='filter' w='14772' x='-272' y='10870'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='24558' id='12' name='Examenes' param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Año_Académico:ok]' type='filter' w='14772' x='-272' y='33326'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='5752' id='11' mode='dropdown' name='Examenes' param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Materia:nk]' type='filter' values='relevant' w='14772' x='-272' y='57884'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#002255' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='Tablero Exámenes Porcentajes'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='Examenes' name='federated.0domqbx1829ld21bfxrpk06ix8a7' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0domqbx1829ld21bfxrpk06ix8a7'>
+        <column caption='Año Académico' datatype='integer' name='[Año_Académico]' role='dimension' type='ordinal' />
+        <column datatype='string' name='[Especialidad]' role='dimension' type='nominal' />
+        <column datatype='string' name='[Turno]' role='dimension' type='nominal' />
+        <column-instance column='[Año_Académico]' derivation='None' name='[none:Año_Académico:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[Especialidad]' derivation='None' name='[none:Especialidad:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Turno]' derivation='None' name='[none:Turno:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='12014' id='1' param='vert' type='layout-flow' w='100068' x='-204' y='0'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#002255' />
+          </zone-style>
+        </zone>
+        <zone h='7895' id='8' is-centered='0' is-scaled='1' param='C:/SMAE/Imagenes/SMAEChico.png' type='bitmap' w='11845' x='1566' y='2174' />
+        <zone forceUpdate='true' h='7080' id='9' type='text' w='62142' x='17086' y='3982'>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontsize='22'>Condición de Examen por Turno</run>
+          </formatted-text>
+        </zone>
+        <zone h='90389' id='10' param='vert' type='layout-flow' w='17018' x='-204' y='11327'>
+          <zone h='22456' id='19' name='Resumen' param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Especialidad:nk]' type='filter' values='database' w='17018' x='-204' y='11327'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='24558' id='20' name='Resumen' param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Año_Académico:ok]' type='filter' values='database' w='17018' x='-204' y='33783'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='5752' id='27' mode='dropdown' name='Resumen' param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]' type='filter' values='database' w='17018' x='-204' y='58341'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#002255' />
+          </zone-style>
+        </zone>
+        <zone h='84783' id='17' name='Resumen' w='33288' x='16814' y='12929' />
+        <zone h='86842' id='21' name='PieAprobados' w='48332' x='49898' y='12700' />
+        <zone h='16018' id='26' name='PieAprobados' pane-specification-id='0' param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]' type='color' w='9530' x='86045' y='76888' />
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' name='Tablero Exámenes'>
+      <viewpoints>
+        <viewpoint name='Examenes'>
+          <zoom type='entire-view' />
+          <selection-collection>
+            <tuple-selection>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields>
+                      <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                    </x-fields>
+                    <y-fields>
+                      <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                    </y-fields>
+                  </pane-descriptor>
+                  <columns>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[cnt:Nota:qk]</field>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+                    <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>1686</value>
+                  <value>&quot;Aprobado&quot;</value>
+                  <value>&quot;3&quot;</value>
+                </tuple>
+              </tuple-reference>
+            </tuple-selection>
+          </selection-collection>
+          <highlight field='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='14' />
+    </window>
+    <window class='dashboard' maximized='true' name='Tablero Exámenes Porcentajes'>
+      <viewpoints>
+        <viewpoint name='PieAprobados'>
+          <highlight field='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Resumen' />
+      </viewpoints>
+      <active id='9' />
+    </window>
+    <window class='worksheet' hidden='true' name='Examenes'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card mode='dropdown' param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Materia:nk]' type='filter' values='relevant' />
+            <card param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Año_Académico:ok]' type='filter' />
+            <card param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Especialidad:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[Turno (grupo)]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Año_Académico:ok]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Especialidad:nk]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Materia:nk]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='PieAprobados'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='0' param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]' size='61' type='color' />
+            <card pane-specification-id='0' param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[usr:Calculation_904942078882443272:qk]' size='21' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Año_Académico:ok]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078880649220:nk]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Especialidad:nk]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Materia:nk]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[usr:Calculation_904942078882443272:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Resumen'>
+      <cards>
+        <edge name='left'>
+          <strip size='300'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card mode='radiolist' param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]' type='filter' />
+            <card param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Año_Académico:ok]' type='filter' />
+            <card mode='dropdown' param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Materia:nk]' type='filter' values='relevant' />
+            <card param='[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Especialidad:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Año_Académico:ok]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078879764480:nk]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078880649220:nk]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Calculation_904942078910312469:qk]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Especialidad:nk]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Materia:nk]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Nivel:nk]</field>
+            <field>[federated.0domqbx1829ld21bfxrpk06ix8a7].[none:Turno:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Tablero Exámenes' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Tablero Exámenes Porcentajes' width='192'>
+      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
+      /j+L+bSk5i2omgAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>

@@ -1,0 +1,3033 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20181.18.0706.1237                               -->
+<workbook original-version='18.1' source-build='2018.1.3 (20181.18.0706.1237)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SortTagCleanup />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='EgresadosCursos+' inline='true' name='federated.0rjitg218g2vpu1dd4aa606pzyfs' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='EgresadosCursos' name='textscan.1yapeno0avy9ed1dwhdzg0zeuoxf'>
+            <connection class='textscan' directory='C:/SMAE/data/1' filename='EgresadosCursos.txt' password='' server='' />
+          </named-connection>
+          <named-connection caption='EgresadosEgresados' name='textscan.0yc2x9904wx6d91g1yy9r0gey1rg'>
+            <connection class='textscan' directory='C:/SMAE/data/1' filename='EgresadosEgresados.txt' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[EgresadosCursos.txt].[legajo]' />
+              <expression op='[EgresadosExamenes.txt].[Legajo]' />
+            </expression>
+          </clause>
+          <relation join='left' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[EgresadosCursos.txt].[legajo]' />
+                <expression op='[EgresadosEgresados.txt].[legajo]' />
+              </expression>
+            </clause>
+            <relation connection='textscan.1yapeno0avy9ed1dwhdzg0zeuoxf' name='EgresadosCursos.txt' table='[EgresadosCursos#txt]' type='table'>
+              <columns character-set='windows-1252' header='yes' locale='es_AR' separator=';'>
+                <column datatype='string' name='legajo' ordinal='0' />
+                <column datatype='integer' name='anoingreso' ordinal='1' />
+                <column datatype='string' name='especialidad' ordinal='2' />
+                <column datatype='integer' name='anoabandono' ordinal='3' />
+                <column datatype='integer' name='aux' ordinal='4' />
+                <column datatype='integer' name='aux2' ordinal='5' />
+                <column datatype='integer' name='HaciendoTesis' ordinal='6' />
+                <column datatype='integer' name='RindeParcial' ordinal='7' />
+              </columns>
+            </relation>
+            <relation connection='textscan.1yapeno0avy9ed1dwhdzg0zeuoxf' name='EgresadosEgresados.txt' table='[EgresadosEgresados#txt]' type='table'>
+              <columns character-set='ISO_8859-9:1989' header='yes' locale='es_AR' separator=';'>
+                <column datatype='integer' name='añoegreso' ordinal='0' />
+                <column datatype='string' name='legajo' ordinal='1' />
+                <column datatype='integer' name='aux' ordinal='2' />
+              </columns>
+            </relation>
+          </relation>
+          <relation connection='textscan.1yapeno0avy9ed1dwhdzg0zeuoxf' name='EgresadosExamenes.txt' table='[EgresadosExamenes#txt]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='es_AR' separator=';'>
+              <column datatype='string' name='Legajo' ordinal='0' />
+              <column datatype='integer' name='ExamenesAprobados' ordinal='1' />
+              <column datatype='integer' name='ExamenesDesaprobados' ordinal='2' />
+              <column datatype='integer' name='ExamenesAusentes' ordinal='3' />
+              <column datatype='integer' name='Examenes' ordinal='4' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[ExamenesAprobados]' value='[EgresadosExamenes.txt].[ExamenesAprobados]' />
+          <map key='[ExamenesAusentes]' value='[EgresadosExamenes.txt].[ExamenesAusentes]' />
+          <map key='[ExamenesDesaprobados]' value='[EgresadosExamenes.txt].[ExamenesDesaprobados]' />
+          <map key='[Examenes]' value='[EgresadosExamenes.txt].[Examenes]' />
+          <map key='[HaciendoTesis]' value='[EgresadosCursos.txt].[HaciendoTesis]' />
+          <map key='[Legajo]' value='[EgresadosExamenes.txt].[Legajo]' />
+          <map key='[RindeParcial]' value='[EgresadosCursos.txt].[RindeParcial]' />
+          <map key='[anoabandono]' value='[EgresadosCursos.txt].[anoabandono]' />
+          <map key='[anoingreso]' value='[EgresadosCursos.txt].[anoingreso]' />
+          <map key='[aux (EgresadosEgresados.txt)]' value='[EgresadosEgresados.txt].[aux]' />
+          <map key='[aux2]' value='[EgresadosCursos.txt].[aux2]' />
+          <map key='[aux]' value='[EgresadosCursos.txt].[aux]' />
+          <map key='[añoegreso]' value='[EgresadosEgresados.txt].[añoegreso]' />
+          <map key='[especialidad]' value='[EgresadosCursos.txt].[especialidad]' />
+          <map key='[legajo (EgresadosEgresados.txt)]' value='[EgresadosEgresados.txt].[legajo]' />
+          <map key='[legajo]' value='[EgresadosCursos.txt].[legajo]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[EgresadosCursos.txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;windows-1252&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_AR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>legajo</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[legajo]</local-name>
+            <parent-name>[EgresadosCursos.txt]</parent-name>
+            <remote-alias>legajo</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>anoingreso</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[anoingreso]</local-name>
+            <parent-name>[EgresadosCursos.txt]</parent-name>
+            <remote-alias>anoingreso</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>especialidad</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[especialidad]</local-name>
+            <parent-name>[EgresadosCursos.txt]</parent-name>
+            <remote-alias>especialidad</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>anoabandono</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[anoabandono]</local-name>
+            <parent-name>[EgresadosCursos.txt]</parent-name>
+            <remote-alias>anoabandono</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>aux</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[aux]</local-name>
+            <parent-name>[EgresadosCursos.txt]</parent-name>
+            <remote-alias>aux</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>aux2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[aux2]</local-name>
+            <parent-name>[EgresadosCursos.txt]</parent-name>
+            <remote-alias>aux2</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HaciendoTesis</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[HaciendoTesis]</local-name>
+            <parent-name>[EgresadosCursos.txt]</parent-name>
+            <remote-alias>HaciendoTesis</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RindeParcial</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[RindeParcial]</local-name>
+            <parent-name>[EgresadosCursos.txt]</parent-name>
+            <remote-alias>RindeParcial</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[EgresadosEgresados.txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;ISO_8859-9:1989&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_AR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>añoegreso</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[añoegreso]</local-name>
+            <parent-name>[EgresadosEgresados.txt]</parent-name>
+            <remote-alias>añoegreso</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>legajo</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[legajo (EgresadosEgresados.txt)]</local-name>
+            <parent-name>[EgresadosEgresados.txt]</parent-name>
+            <remote-alias>legajo</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>aux</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[aux (EgresadosEgresados.txt)]</local-name>
+            <parent-name>[EgresadosEgresados.txt]</parent-name>
+            <remote-alias>aux</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[EgresadosExamenes.txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_AR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Legajo</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Legajo]</local-name>
+            <parent-name>[EgresadosExamenes.txt]</parent-name>
+            <remote-alias>Legajo</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ExamenesAprobados</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ExamenesAprobados]</local-name>
+            <parent-name>[EgresadosExamenes.txt]</parent-name>
+            <remote-alias>ExamenesAprobados</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ExamenesDesaprobados</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ExamenesDesaprobados]</local-name>
+            <parent-name>[EgresadosExamenes.txt]</parent-name>
+            <remote-alias>ExamenesDesaprobados</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ExamenesAusentes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ExamenesAusentes]</local-name>
+            <parent-name>[EgresadosExamenes.txt]</parent-name>
+            <remote-alias>ExamenesAusentes</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Examenes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Examenes]</local-name>
+            <parent-name>[EgresadosExamenes.txt]</parent-name>
+            <remote-alias>Examenes</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[sum:Calculation_701998643646234627:qk]&quot;' value='Abandonos' />
+        </aliases>
+      </column>
+      <column caption='Edad' datatype='integer' name='[Calculation_460493115751870464]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[añoegreso] - YEAR([fechanacimiento])' />
+      </column>
+      <column aggregation='Sum' caption='Tiempo de la carrera' datatype='integer' name='[Calculation_701998643606347776]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[añoegreso] - [anoingreso] + 1' />
+      </column>
+      <column aggregation='Sum' caption='% Conversion' datatype='real' name='[Calculation_701998643617476609]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[ExamenesAprobados] / ([ExamenesAprobados] + [ExamenesDesaprobados])' />
+      </column>
+      <column caption='Egresados' datatype='integer' name='[Calculation_701998643643523074]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='if ISNULL([añoegreso]) then 0 else 1 END' />
+      </column>
+      <column aggregation='Sum' caption='Abandonos' datatype='integer' name='[Calculation_701998643646234627]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='if [anoabandono] &lt; 2018 AND [HaciendoTesis] = 0 then 1 else 0 END' />
+      </column>
+      <column caption='Inscriptos' datatype='integer' name='[Calculation_701998643646443524]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='count([legajo])' />
+      </column>
+      <column caption='Egresados &lt; AÑO ACTUAL' datatype='integer' name='[Calculation_701998643667062790]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='if [añoegreso (EgresadosEgresados.txt1)] &lt; 2018 then [añoegreso (EgresadosEgresados.txt1)] else 0 END' />
+      </column>
+      <column caption='Materias Recursadas' datatype='integer' name='[Calculation_722546319452336128]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[aux]-[aux2]' />
+      </column>
+      <column caption='Tiempo de Permanencia' datatype='integer' name='[Calculation_722546319457009665]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[anoabandono] - [anoingreso] + 1' />
+      </column>
+      <column caption='% Desaprobados' datatype='real' name='[Calculation_722546319458770946]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[ExamenesDesaprobados] / ([ExamenesAprobados] + [ExamenesDesaprobados])' />
+      </column>
+      <column caption='Edad Abandono' datatype='integer' name='[Calculation_722546319460536324]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[anoabandono] - YEAR([fechanacimiento])' />
+      </column>
+      <column caption='Examenes Aprobados' datatype='integer' name='[ExamenesAprobados]' role='measure' type='quantitative' />
+      <column caption='Examenes Ausentes' datatype='integer' name='[ExamenesAusentes]' role='measure' type='quantitative' />
+      <column caption='Examenes Desaprobados' datatype='integer' name='[ExamenesDesaprobados]' role='measure' type='quantitative' />
+      <column caption='Haciendo Tesis' datatype='integer' name='[HaciendoTesis]' role='measure' type='quantitative' />
+      <column caption='Legajo1' datatype='string' name='[Legajo]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Rinde Parcial' datatype='integer' name='[RindeParcial]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Anoabandono' datatype='integer' name='[anoabandono]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Año Ingreso' datatype='integer' name='[anoingreso]' role='dimension' type='ordinal' />
+      <column caption='MateriasAprobadas' datatype='integer' name='[aux2]' role='measure' type='quantitative' />
+      <column caption='MateriasCursadas' datatype='integer' name='[aux]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Añoegreso' datatype='integer' name='[añoegreso]' role='dimension' type='ordinal' />
+      <column caption='Especialidad' datatype='string' name='[especialidad]' role='dimension' type='nominal' />
+      <column caption='Legajo' datatype='string' name='[legajo]' role='dimension' type='nominal' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <column-instance column='[anoingreso]' derivation='None' name='[none:anoingreso:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[añoegreso]' derivation='None' name='[none:añoegreso:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_701998643646234627]' derivation='Sum' name='[sum:Calculation_701998643646234627:qk]' pivot='key' type='quantitative' />
+      <group hidden='true' name='[Exclusiones (Anoingreso,Añoegreso)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:anoingreso:qk]' />
+          <groupfilter function='level-members' level='[none:añoegreso:qk]' />
+        </groupfilter>
+      </group>
+      <layout dim-ordering='alphabetic' dim-percentage='0.433249' measure-ordering='alphabetic' measure-percentage='0.566751' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Argentina&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimación&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <filter class='categorical' column='[anoingreso]' filter-group='2'>
+        <groupfilter from='2005' function='range' level='[anoingreso]' to='2018' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+      </filter>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='% Aprobacion'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EgresadosCursos+' name='federated.0rjitg218g2vpu1dd4aa606pzyfs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rjitg218g2vpu1dd4aa606pzyfs'>
+            <column aggregation='Sum' caption='% Conversion' datatype='real' name='[Calculation_701998643617476609]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='[ExamenesAprobados] / ([ExamenesAprobados] + [ExamenesDesaprobados])' />
+            </column>
+            <column caption='Examenes Aprobados' datatype='integer' name='[ExamenesAprobados]' role='measure' type='quantitative' />
+            <column caption='Examenes Desaprobados' datatype='integer' name='[ExamenesDesaprobados]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_701998643617476609]' derivation='Avg' name='[avg:Calculation_701998643617476609:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Añoegreso' datatype='integer' name='[añoegreso]' role='dimension' type='ordinal' />
+            <column-instance column='[añoegreso]' derivation='None' name='[none:añoegreso:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:ok]'>
+            <groupfilter from='2010' function='range' level='[none:añoegreso:ok]' to='2018' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_701998643617476609:qk]' value='p0.00%' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_701998643617476609:qk]' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='1' />
+            <format attr='background-color' value='#6d909c' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='40' />
+            <format attr='color' value='#d4d4d4' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_701998643617476609:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='% Desaprobados'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EgresadosCursos+' name='federated.0rjitg218g2vpu1dd4aa606pzyfs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rjitg218g2vpu1dd4aa606pzyfs'>
+            <column aggregation='Sum' caption='Abandonos' datatype='integer' name='[Calculation_701998643646234627]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if [anoabandono] &lt; 2018 AND [HaciendoTesis] = 0 then 1 else 0 END' />
+            </column>
+            <column caption='% Desaprobados' datatype='real' name='[Calculation_722546319458770946]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[ExamenesDesaprobados] / ([ExamenesAprobados] + [ExamenesDesaprobados])' />
+            </column>
+            <column caption='Examenes Aprobados' datatype='integer' name='[ExamenesAprobados]' role='measure' type='quantitative' />
+            <column caption='Examenes Desaprobados' datatype='integer' name='[ExamenesDesaprobados]' role='measure' type='quantitative' />
+            <column caption='Haciendo Tesis' datatype='integer' name='[HaciendoTesis]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Anoabandono' datatype='integer' name='[anoabandono]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_722546319458770946]' derivation='Avg' name='[avg:Calculation_722546319458770946:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_701998643646234627]' derivation='None' name='[none:Calculation_701998643646234627:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643646234627:ok]'>
+            <groupfilter function='member' level='[none:Calculation_701998643646234627:ok]' member='1' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643646234627:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319458770946:qk]' value='p0.00%' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319458770946:qk]' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='1' />
+            <format attr='background-color' value='#6d909c' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='40' />
+            <format attr='color' value='#d4d4d4' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='font-size' value='12' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319458770946:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='24'>&lt;</run>
+                <run bold='true' fontsize='24'>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319458770946:qk]</run>
+                <run bold='true' fontsize='24'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Cuadro Resumen'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#ffffff'>&lt;</run>
+            <run fontcolor='#ffffff'>Sheet Name</run>
+            <run fontcolor='#ffffff'>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EgresadosCursos+' name='federated.0rjitg218g2vpu1dd4aa606pzyfs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rjitg218g2vpu1dd4aa606pzyfs'>
+            <column caption='Egresados' datatype='integer' name='[Calculation_701998643643523074]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='if ISNULL([añoegreso]) then 0 else 1 END' />
+            </column>
+            <column aggregation='Sum' caption='Abandonos' datatype='integer' name='[Calculation_701998643646234627]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if [anoabandono] &lt; 2018 AND [HaciendoTesis] = 0 then 1 else 0 END' />
+            </column>
+            <column caption='Inscriptos' datatype='integer' name='[Calculation_701998643646443524]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='count([legajo])' />
+            </column>
+            <column caption='Haciendo Tesis' datatype='integer' name='[HaciendoTesis]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Anoabandono' datatype='integer' name='[anoabandono]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' caption='Año Ingreso' datatype='integer' name='[anoingreso]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' caption='Añoegreso' datatype='integer' name='[añoegreso]' role='dimension' type='ordinal' />
+            <column caption='Legajo' datatype='string' name='[legajo]' role='dimension' type='nominal' />
+            <column-instance column='[anoingreso]' derivation='None' name='[none:anoingreso:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_701998643643523074]' derivation='Sum' name='[sum:Calculation_701998643643523074:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_701998643646234627]' derivation='Sum' name='[sum:Calculation_701998643646234627:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_701998643646443524]' derivation='User' name='[usr:Calculation_701998643646443524:vtsum:qk]' pivot='key' type='quantitative' visual-totals='Sum' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[usr:Calculation_701998643646443524:vtsum:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[sum:Calculation_701998643646234627:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[sum:Calculation_701998643643523074:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[usr:Calculation_701998643646443524:vtsum:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[sum:Calculation_701998643646234627:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[sum:Calculation_701998643643523074:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]'>
+            <groupfilter expression='[anoingreso] &lt;= YEAR(TODAY()) and [anoingreso] &gt; (YEAR(TODAY()) -14)' function='filter' user:ui-marker='filter-by'>
+              <groupfilter from='2005' function='range' level='[none:anoingreso:ok]' to='2018' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]</column>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]' value='112' />
+            <format attr='height' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]' value='30' />
+            <format attr='text-align' value='center' />
+            <format attr='color' data-class='total' scope='rows' value='#ffffff' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]' value='#000000' />
+            <format attr='font-weight' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]' value='bold' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]' value='148' />
+            <format attr='height' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]' value='30' />
+            <format attr='background-color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[Multiple Values]' value='#ffffff' />
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='background-color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]' value='#6d909c' />
+            <format attr='background-color' scope='rows' value='#6da997' />
+            <format attr='total-label' data-class='total' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]' value='Total' />
+            <format attr='background-color' data-class='total' scope='rows' value='#6d7aa9' />
+            <format attr='border-color' value='#6d7aa9' />
+            <format attr='border-style' value='none' />
+            <format attr='border-style' data-class='total' value='solid' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='background-color' value='#6d909c' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]' value='center' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]' value='#ffffff' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]' value='#ffffff' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[sum:Calculation_701998643643523074:qk]' value='#555555' />
+            <format attr='color' scope='rows' value='#555555' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[usr:Calculation_701998643646443524:vtsum:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='background-color' data-class='total' scope='rows' value='#6d7aa9' />
+            <format attr='border-color' value='#6d7aa9' />
+            <format attr='border-style' value='none' />
+            <format attr='border-style' data-class='total' value='solid' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-color' scope='rows' value='#6d7aa9' />
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='cols' value='#6d7aa9' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#252c3f' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows total='true'>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]</rows>
+        <cols total='true'>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Cuadro Resumen (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#ffffff'>&lt;</run>
+            <run fontcolor='#ffffff'>Sheet Name</run>
+            <run fontcolor='#ffffff'>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EgresadosCursos+' name='federated.0rjitg218g2vpu1dd4aa606pzyfs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rjitg218g2vpu1dd4aa606pzyfs'>
+            <column caption='Egresados' datatype='integer' name='[Calculation_701998643643523074]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='if ISNULL([añoegreso]) then 0 else 1 END' />
+            </column>
+            <column aggregation='Sum' caption='Abandonos' datatype='integer' name='[Calculation_701998643646234627]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if [anoabandono] &lt; 2018 AND [HaciendoTesis] = 0 then 1 else 0 END' />
+            </column>
+            <column caption='Inscriptos' datatype='integer' name='[Calculation_701998643646443524]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='count([legajo])' />
+            </column>
+            <column caption='Haciendo Tesis' datatype='integer' name='[HaciendoTesis]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Anoabandono' datatype='integer' name='[anoabandono]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' caption='Año Ingreso' datatype='integer' name='[anoingreso]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' caption='Añoegreso' datatype='integer' name='[añoegreso]' role='dimension' type='ordinal' />
+            <column caption='Legajo' datatype='string' name='[legajo]' role='dimension' type='nominal' />
+            <column-instance column='[anoingreso]' derivation='None' name='[none:anoingreso:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_701998643643523074]' derivation='Sum' name='[sum:Calculation_701998643643523074:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_701998643646234627]' derivation='Sum' name='[sum:Calculation_701998643646234627:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_701998643646443524]' derivation='User' name='[usr:Calculation_701998643646443524:vtsum:qk]' pivot='key' type='quantitative' visual-totals='Sum' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[usr:Calculation_701998643646443524:vtsum:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[sum:Calculation_701998643646234627:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[sum:Calculation_701998643643523074:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[usr:Calculation_701998643646443524:vtsum:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[sum:Calculation_701998643646234627:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[sum:Calculation_701998643643523074:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]'>
+            <groupfilter expression='[anoingreso] &lt;= YEAR(TODAY()) and [anoingreso] &gt; (YEAR(TODAY()) - 15)' function='filter' user:ui-marker='filter-by'>
+              <groupfilter from='2005' function='range' level='[none:anoingreso:ok]' to='2018' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]</column>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]' value='117' />
+            <format attr='height' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]' value='30' />
+            <format attr='text-align' value='center' />
+            <format attr='color' data-class='total' scope='rows' value='#ffffff' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]' value='#000000' />
+            <format attr='font-weight' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]' value='bold' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]' value='148' />
+            <format attr='height' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]' value='30' />
+            <format attr='background-color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[Multiple Values]' value='#ffffff' />
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='background-color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]' value='#6d909c' />
+            <format attr='background-color' scope='rows' value='#6da997' />
+            <format attr='total-label' data-class='total' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]' value='Total' />
+            <format attr='background-color' data-class='total' scope='rows' value='#6d7aa9' />
+            <format attr='border-color' value='#6d7aa9' />
+            <format attr='border-style' value='none' />
+            <format attr='border-style' data-class='total' value='solid' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='background-color' value='#6d909c' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]' value='center' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]' value='#ffffff' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]' value='#ffffff' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[sum:Calculation_701998643643523074:qk]' value='#555555' />
+            <format attr='color' scope='rows' value='#555555' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[usr:Calculation_701998643646443524:vtsum:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='background-color' data-class='total' scope='rows' value='#6d7aa9' />
+            <format attr='border-color' value='#6d7aa9' />
+            <format attr='border-style' value='none' />
+            <format attr='border-style' data-class='total' value='solid' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-color' scope='rows' value='#6d7aa9' />
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='cols' value='#6d7aa9' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#252c3f' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows total='true'>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]</rows>
+        <cols total='true'>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[:Measure Names]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Desertores por Cohorte '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#f5f5f5' fontsize='16'>Deserciones por Cohorte</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EgresadosCursos+' name='federated.0rjitg218g2vpu1dd4aa606pzyfs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rjitg218g2vpu1dd4aa606pzyfs'>
+            <column aggregation='Sum' caption='Abandonos' datatype='integer' name='[Calculation_701998643646234627]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if [anoabandono] &lt; 2018 AND [HaciendoTesis] = 0 then 1 else 0 END' />
+            </column>
+            <column caption='Haciendo Tesis' datatype='integer' name='[HaciendoTesis]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Anoabandono' datatype='integer' name='[anoabandono]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' caption='Año Ingreso' datatype='integer' name='[anoingreso]' role='dimension' type='ordinal' />
+            <column caption='Legajo' datatype='string' name='[legajo]' role='dimension' type='nominal' />
+            <column-instance column='[anoabandono]' derivation='None' name='[none:anoabandono:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[anoingreso]' derivation='None' name='[none:anoingreso:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[anoingreso]' derivation='None' name='[none:anoingreso:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_701998643646234627]' derivation='Sum' name='[sum:Calculation_701998643646234627:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoabandono:ok]' kind='hide'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:anoabandono:ok]' />
+              <groupfilter function='member' level='[none:anoabandono:ok]' member='2018' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]'>
+            <groupfilter count='9' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='MIN([legajo])' function='order' user:ui-marker='order'>
+                <groupfilter expression='[anoingreso] &lt; YEAR(TODAY()) AND [anoingreso] &gt; (YEAR(TODAY()) - 10)' function='filter' user:ui-marker='filter-by'>
+                  <groupfilter from='2005' function='range' level='[none:anoingreso:ok]' to='2018' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:qk]' scope='rows' value='Año de Ingreso' />
+            <encoding attr='space' class='0' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:qk]' field-type='quantitative' reverse='true' scope='rows' type='space' />
+            <format attr='width' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:qk]' value='64' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#59a14f' />
+            <format attr='border-style' value='none' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[sum:Calculation_701998643646234627:qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[sum:Calculation_701998643646234627:qk]' value='14' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' data-class='total' value='none' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:qk]' value='#f5f5f5' />
+            <format attr='color' scope='cols' value='#6d909c' />
+            <format attr='text-orientation' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:qk]' value='-90' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoabandono:ok]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' data-class='total' value='none' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+            <format attr='border-color' data-class='subtotal' scope='cols' value='#6d909c' />
+            <format attr='border-style' data-class='subtotal' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='cols' value='0' />
+            <format attr='background-color' value='#ea8859' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#ea8859' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[sum:Calculation_701998643646234627:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Año Ingreso:&#9;</run>
+                <run bold='true'>&lt;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Año Abandono:</run>
+                <run bold='true'>&lt;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoabandono:ok]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Abandonos:&#9;</run>
+                <run bold='true'>&lt;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[sum:Calculation_701998643646234627:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='12'>&lt;</run>
+                <run fontsize='12'>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[sum:Calculation_701998643646234627:qk]</run>
+                <run fontsize='12'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:qk]</rows>
+        <cols>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoabandono:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet lock-quick-filters='true' name='Egresados por Cohorte'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#f5f5f5' fontsize='16'>Egresados por Cohorte</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EgresadosCursos+' name='federated.0rjitg218g2vpu1dd4aa606pzyfs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rjitg218g2vpu1dd4aa606pzyfs'>
+            <column aggregation='Sum' caption='Año Ingreso' datatype='integer' name='[anoingreso]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' caption='Añoegreso' datatype='integer' name='[añoegreso]' role='dimension' type='ordinal' />
+            <column-instance column='[legajo (EgresadosEgresados.txt)]' derivation='Count' name='[cnt:legajo (EgresadosEgresados.txt):qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[legajo (EgresadosEgresados.txt)]' role='dimension' type='nominal' />
+            <column-instance column='[anoingreso]' derivation='None' name='[none:anoingreso:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[anoingreso]' derivation='None' name='[none:anoingreso:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[añoegreso]' derivation='None' name='[none:añoegreso:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[Exclusiones (Anoingreso,Añoegreso)]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:anoingreso:qk]' />
+                <groupfilter function='level-members' level='[none:añoegreso:qk]' />
+              </groupfilter>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='member' level='[none:anoingreso:qk]' member='2014' />
+                <groupfilter function='member' level='[none:añoegreso:qk]' member='2016' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]'>
+            <groupfilter expression='[anoingreso] &lt;= YEAR(TODAY()) AND [anoingreso] &gt; (YEAR(TODAY()) - 14)' function='filter' user:ui-marker='filter-by'>
+              <groupfilter from='2005' function='range' level='[none:anoingreso:ok]' to='2013' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:qk]</column>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[Exclusiones (Anoingreso,Añoegreso)]</column>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:qk]' scope='rows' value='Año de Ingreso' />
+            <encoding attr='space' class='0' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:qk]' field-type='quantitative' reverse='true' scope='rows' type='space' />
+            <format attr='width' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:qk]' value='64' />
+            <format attr='title' class='0' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:qk]' scope='cols' value='Año de Egreso' />
+            <format attr='tick-color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[cnt:legajo (EgresadosEgresados.txt):qk]' value='#00000000' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#59a14f' />
+            <format attr='border-style' value='none' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[cnt:legajo (EgresadosEgresados.txt):qk]' value='#ffffff' />
+            <format attr='font-weight' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[cnt:legajo (EgresadosEgresados.txt):qk]' value='normal' />
+            <format attr='font-size' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[cnt:legajo (EgresadosEgresados.txt):qk]' value='14' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' data-class='total' value='none' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+            <format attr='background-color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[cnt:legajo (EgresadosEgresados.txt):qk]' value='#6d909c' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:qk]' value='#f5f5f5' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:qk]' value='#f5f5f5' />
+            <format attr='color' scope='cols' value='#6d909c' />
+            <format attr='text-orientation' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:qk]' value='-90' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' data-class='total' value='none' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+            <format attr='border-color' data-class='subtotal' scope='cols' value='#6d909c' />
+            <format attr='border-style' data-class='subtotal' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='cols' value='0' />
+            <format attr='omit-on-special' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[cnt:legajo (EgresadosEgresados.txt):qk]' value='true' />
+            <format attr='break-on-special' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[cnt:legajo (EgresadosEgresados.txt):qk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[cnt:legajo (EgresadosEgresados.txt):qk]' value='false' />
+            <format attr='background-color' value='#ea8859' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#ea8859' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[cnt:legajo (EgresadosEgresados.txt):qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Año Ingreso:&#9;</run>
+                <run bold='true'>&lt;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Año Egreso:&#9;</run>
+                <run bold='true'>&lt;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Conteo de legajo (EgresadosEgresados.txt):&#9;</run>
+                <run bold='true'>&lt;[federated.0rjitg218g2vpu1dd4aa606pzyfs].[cnt:legajo (EgresadosEgresados.txt):qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:qk]</rows>
+        <cols>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Especialidad'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EgresadosCursos+' name='federated.0rjitg218g2vpu1dd4aa606pzyfs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rjitg218g2vpu1dd4aa606pzyfs'>
+            <column caption='Especialidad' datatype='string' name='[especialidad]' role='dimension' type='nominal' />
+            <column-instance column='[especialidad]' derivation='None' name='[none:especialidad:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='795' />
+            <format attr='height' value='55' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:especialidad:nk]' value='26' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:especialidad:nk]' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#252c3f' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='26' />
+            <format attr='color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:especialidad:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='22'>&lt;</run>
+                <run fontsize='22'>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:especialidad:nk]</run>
+                <run fontsize='22'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Materias Aprobadas'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EgresadosCursos+' name='federated.0rjitg218g2vpu1dd4aa606pzyfs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rjitg218g2vpu1dd4aa606pzyfs'>
+            <column aggregation='Sum' caption='Abandonos' datatype='integer' name='[Calculation_701998643646234627]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if [anoabandono] &lt; 2018 AND [HaciendoTesis] = 0 then 1 else 0 END' />
+            </column>
+            <column caption='Haciendo Tesis' datatype='integer' name='[HaciendoTesis]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Anoabandono' datatype='integer' name='[anoabandono]' role='dimension' type='ordinal' />
+            <column caption='MateriasAprobadas' datatype='integer' name='[aux2]' role='measure' type='quantitative' />
+            <column-instance column='[aux2]' derivation='Avg' name='[avg:aux2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_701998643646234627]' derivation='None' name='[none:Calculation_701998643646234627:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643646234627:ok]'>
+            <groupfilter function='member' level='[none:Calculation_701998643646234627:ok]' member='1' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643646234627:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:aux2:qk]' value='#f5f5f5' />
+            <format attr='text-format' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:aux2:qk]' value='n#,##0.00;-#,##0.00' />
+            <format attr='text-align' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:aux2:qk]' value='center' />
+            <format attr='font-size' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:aux2:qk]' value='40' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#6d909c' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:aux2:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='24'>&lt;</run>
+                <run bold='true' fontsize='24'>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:aux2:qk]</run>
+                <run bold='true' fontsize='24'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Materias Reprobadas'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EgresadosCursos+' name='federated.0rjitg218g2vpu1dd4aa606pzyfs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rjitg218g2vpu1dd4aa606pzyfs'>
+            <column aggregation='Sum' caption='Abandonos' datatype='integer' name='[Calculation_701998643646234627]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if [anoabandono] &lt; 2018 AND [HaciendoTesis] = 0 then 1 else 0 END' />
+            </column>
+            <column caption='Materias Recursadas' datatype='integer' name='[Calculation_722546319452336128]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[aux]-[aux2]' />
+            </column>
+            <column caption='Haciendo Tesis' datatype='integer' name='[HaciendoTesis]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Anoabandono' datatype='integer' name='[anoabandono]' role='dimension' type='ordinal' />
+            <column caption='MateriasAprobadas' datatype='integer' name='[aux2]' role='measure' type='quantitative' />
+            <column caption='MateriasCursadas' datatype='integer' name='[aux]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_722546319452336128]' derivation='Avg' name='[avg:Calculation_722546319452336128:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_701998643646234627]' derivation='None' name='[none:Calculation_701998643646234627:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643646234627:ok]'>
+            <groupfilter function='member' level='[none:Calculation_701998643646234627:ok]' member='1' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643646234627:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319452336128:qk]' value='#f5f5f5' />
+            <format attr='font-size' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319452336128:qk]' value='40' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#6d909c' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319452336128:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='24'>&lt;</run>
+                <run bold='true' fontsize='24'>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319452336128:qk]</run>
+                <run bold='true' fontsize='24'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Promedio Edad Egreso'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EgresadosCursos+' name='federated.0rjitg218g2vpu1dd4aa606pzyfs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rjitg218g2vpu1dd4aa606pzyfs'>
+            <column caption='Edad' datatype='integer' name='[Calculation_460493115751870464]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='[añoegreso] - YEAR([fechanacimiento])' />
+            </column>
+            <column-instance column='[Calculation_460493115751870464]' derivation='Avg' name='[avg:Calculation_460493115751870464:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Añoegreso' datatype='integer' name='[añoegreso]' role='dimension' type='ordinal' />
+            <column datatype='datetime' name='[fechanacimiento]' role='dimension' type='ordinal' />
+            <column-instance column='[añoegreso]' derivation='None' name='[none:añoegreso:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:ok]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:añoegreso:ok]' member='2010' />
+              <groupfilter function='member' level='[none:añoegreso:ok]' member='2011' />
+              <groupfilter function='member' level='[none:añoegreso:ok]' member='2012' />
+              <groupfilter function='member' level='[none:añoegreso:ok]' member='2013' />
+              <groupfilter function='member' level='[none:añoegreso:ok]' member='2014' />
+              <groupfilter function='member' level='[none:añoegreso:ok]' member='2015' />
+              <groupfilter function='member' level='[none:añoegreso:ok]' member='2016' />
+              <groupfilter function='member' level='[none:añoegreso:ok]' member='2017' />
+              <groupfilter function='member' level='[none:añoegreso:ok]' member='2018' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-size' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_460493115751870464:qk]' value='40' />
+            <format attr='text-align' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_460493115751870464:qk]' value='center' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#6d909c' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='48' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_460493115751870464:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows total='true' />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Promedio Materias Recursadas'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EgresadosCursos+' name='federated.0rjitg218g2vpu1dd4aa606pzyfs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rjitg218g2vpu1dd4aa606pzyfs'>
+            <column caption='Materias Recursadas' datatype='integer' name='[Calculation_722546319452336128]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[aux]-[aux2]' />
+            </column>
+            <column caption='MateriasAprobadas' datatype='integer' name='[aux2]' role='measure' type='quantitative' />
+            <column caption='MateriasCursadas' datatype='integer' name='[aux]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_722546319452336128]' derivation='Avg' name='[avg:Calculation_722546319452336128:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Añoegreso' datatype='integer' name='[añoegreso]' role='dimension' type='ordinal' />
+            <column-instance column='[añoegreso]' derivation='None' name='[none:añoegreso:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:ok]'>
+            <groupfilter from='2010' function='range' level='[none:añoegreso:ok]' to='2018' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319452336128:qk]' value='#f5f5f5' />
+            <format attr='font-size' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319452336128:qk]' value='40' />
+            <format attr='text-format' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319452336128:qk]' value='n#,##0.00;-#,##0.00' />
+            <format attr='text-align' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319452336128:qk]' value='center' />
+            <format attr='width' value='181' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#6d909c' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#252c3f' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319452336128:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Promedio Tiempo de Egreso'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EgresadosCursos+' name='federated.0rjitg218g2vpu1dd4aa606pzyfs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rjitg218g2vpu1dd4aa606pzyfs'>
+            <column aggregation='Sum' caption='Tiempo de la carrera' datatype='integer' name='[Calculation_701998643606347776]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='[añoegreso] - [anoingreso] + 1' />
+            </column>
+            <column aggregation='Sum' caption='Año Ingreso' datatype='integer' name='[anoingreso]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_701998643606347776]' derivation='Avg' name='[avg:Calculation_701998643606347776:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Añoegreso' datatype='integer' name='[añoegreso]' role='dimension' type='ordinal' />
+            <column caption='Legajo' datatype='string' name='[legajo]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_701998643606347776]' derivation='None' name='[none:Calculation_701998643606347776:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[añoegreso]' derivation='None' name='[none:añoegreso:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643606347776:ok]'>
+            <groupfilter expression='MIN([legajo]) &gt; &quot;4&quot;' function='filter' user:ui-filter-by-field='true' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:Calculation_701998643606347776:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:ok]'>
+            <groupfilter from='2010' function='range' level='[none:añoegreso:ok]' to='2018' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643606347776:ok]</column>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_701998643606347776:qk]' value='n#,##0.00;-#,##0.00' />
+            <format attr='color' value='#000000' />
+            <format attr='color' data-class='subtotal' scope='cols' value='#ffffff' />
+            <format attr='color' data-class='subtotal' scope='rows' value='#59a14f' />
+            <format attr='border-color' value='#59a14f' />
+            <format attr='border-style' value='none' />
+            <format attr='font-size' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_701998643606347776:qk]' value='40' />
+            <format attr='font-weight' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_701998643606347776:qk]' value='normal' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_701998643606347776:qk]' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' scope='cols' value='#69aaa5' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-color' value='#69aaa5' />
+            <format attr='border-style' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#499894' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_701998643606347776:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Promedio Tiempo de Permanencia'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EgresadosCursos+' name='federated.0rjitg218g2vpu1dd4aa606pzyfs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rjitg218g2vpu1dd4aa606pzyfs'>
+            <column aggregation='Sum' caption='Tiempo de la carrera' datatype='integer' name='[Calculation_701998643606347776]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='[añoegreso] - [anoingreso] + 1' />
+            </column>
+            <column aggregation='Sum' caption='Abandonos' datatype='integer' name='[Calculation_701998643646234627]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if [anoabandono] &lt; 2018 AND [HaciendoTesis] = 0 then 1 else 0 END' />
+            </column>
+            <column caption='Tiempo de Permanencia' datatype='integer' name='[Calculation_722546319457009665]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[anoabandono] - [anoingreso] + 1' />
+            </column>
+            <column caption='Haciendo Tesis' datatype='integer' name='[HaciendoTesis]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Anoabandono' datatype='integer' name='[anoabandono]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' caption='Año Ingreso' datatype='integer' name='[anoingreso]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_722546319457009665]' derivation='Avg' name='[avg:Calculation_722546319457009665:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Añoegreso' datatype='integer' name='[añoegreso]' role='dimension' type='ordinal' />
+            <column caption='Legajo' datatype='string' name='[legajo]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_701998643606347776]' derivation='None' name='[none:Calculation_701998643606347776:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_701998643646234627]' derivation='None' name='[none:Calculation_701998643646234627:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643606347776:ok]'>
+            <groupfilter expression='MIN([legajo]) &gt; &quot;4&quot;' function='filter' user:ui-filter-by-field='true' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:Calculation_701998643606347776:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643646234627:ok]'>
+            <groupfilter function='member' level='[none:Calculation_701998643646234627:ok]' member='1' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643606347776:ok]</column>
+            <column>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643646234627:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='153' />
+            <format attr='color' value='#000000' />
+            <format attr='color' data-class='subtotal' scope='cols' value='#ffffff' />
+            <format attr='color' data-class='subtotal' scope='rows' value='#59a14f' />
+            <format attr='border-color' value='#59a14f' />
+            <format attr='border-style' value='none' />
+            <format attr='color' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319457009665:qk]' value='#f5f5f5' />
+            <format attr='text-format' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319457009665:qk]' value='n#,##0.00;-#,##0.00' />
+            <format attr='text-align' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319457009665:qk]' value='center' />
+            <format attr='font-size' field='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319457009665:qk]' value='40' />
+            <format attr='font-size' value='9' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' scope='cols' value='#69aaa5' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-color' value='#69aaa5' />
+            <format attr='border-style' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#6d909c' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#499894' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319457009665:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='24'>&lt;</run>
+                <run bold='true' fontsize='24'>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319457009665:qk]</run>
+                <run bold='true' fontsize='24'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Deserción por Cohorte'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='56019' id='21' param='horz' type='layout-flow' w='49271' x='38281' y='22870'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#252c3f' />
+          </zone-style>
+        </zone>
+        <zone h='9074' id='1' param='horz' type='layout-flow' w='87344' x='260' y='93'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#252c3f' />
+          </zone-style>
+        </zone>
+        <zone h='7222' id='2' is-centered='0' is-scaled='1' param='C:/SMAE/Imagenes/SMAEChico.png' type='bitmap' w='9635' x='1094' y='1296' />
+        <zone forceUpdate='true' h='6389' id='3' type='text' w='65313' x='10417' y='1204'>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontsize='20'>Deserciones de </run>
+          </formatted-text>
+        </zone>
+        <zone h='13056' id='4' param='vert' type='layout-flow' w='14167' x='260' y='9444'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#6d909c' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='2963' id='6' type='text' w='20208' x='521' y='9630'>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontsize='16'>Promedio de Permanencia</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='3519' id='8' type='text' w='6615' x='7031' y='17778'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#e6e6e6' fontsize='16'>Años</run>
+          </formatted-text>
+        </zone>
+        <zone h='13056' id='9' param='vert' type='layout-flow' w='15729' x='14635' y='9444'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#6d909c' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='2963' id='10' type='text' w='9792' x='14792' y='9815'>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontsize='16'>Exámenes</run>
+          </formatted-text>
+        </zone>
+        <zone h='8889' id='11' is-centered='0' is-scaled='1' param='C:/SMAE/Imagenes/examen.png' type='bitmap' w='4948' x='14948' y='12870' />
+        <zone h='9167' id='12' is-centered='0' is-scaled='1' param='C:/SMAE/Imagenes/clock2.png' type='bitmap' w='6406' x='469' y='12685' />
+        <zone forceUpdate='true' h='4259' id='14' type='text' w='12760' x='18594' y='17315'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#f5f5f5' fontsize='16'>Ex. Desaprobados</run>
+          </formatted-text>
+        </zone>
+        <zone h='13241' id='15' param='vert' type='layout-flow' w='14531' x='30573' y='9352'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#6d909c' />
+          </zone-style>
+        </zone>
+        <zone h='8241' id='16' is-centered='0' is-scaled='1' param='C:/SMAE/Imagenes/estudiante.png' type='bitmap' w='5625' x='30833' y='13241' />
+        <zone forceUpdate='true' h='2963' id='17' type='text' w='14271' x='30677' y='9537'>
+          <formatted-text>
+            <run fontcolor='#f5f5f5' fontsize='16'>Prom. Materias Aprobadas</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='3519' id='18' type='text' w='7969' x='36563' y='17685'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#f5f5f5' fontsize='16'>Materias</run>
+          </formatted-text>
+        </zone>
+        <zone h='13333' id='19' param='horz' type='layout-flow' w='42188' x='45365' y='9259'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#6d909c' />
+          </zone-style>
+        </zone>
+        <zone h='56111' id='22' param='horz' type='layout-flow' w='37656' x='313' y='22778'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ea8859' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='3611' id='25' type='text' w='23385' x='45521' y='23148'>
+          <formatted-text>
+            <run fontcolor='#f5f5f5' fontsize='16'>Cuadro Resumen</run>
+          </formatted-text>
+        </zone>
+        <zone h='9537' id='26' is-centered='0' is-scaled='1' param='C:/SMAE/Imagenes/Users-Student-icon.png' type='bitmap' w='5573' x='45677' y='12685' />
+        <zone forceUpdate='true' h='3519' id='27' type='text' w='19427' x='45573' y='9444'>
+          <formatted-text>
+            <run fontcolor='#f5f5f5' fontsize='16'>Prom. Materias Reprobadas</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='3519' id='28' type='text' w='8490' x='51250' y='17778'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#f5f5f5' fontsize='16'>Materias</run>
+          </formatted-text>
+        </zone>
+        <zone h='6667' id='30' name='Especialidad' show-title='false' w='45833' x='21198' y='2037' />
+        <zone h='4907' id='31' name='Promedio Tiempo de Permanencia' show-title='false' w='8385' x='6094' y='13889' />
+        <zone h='4074' id='32' name='% Desaprobados' show-title='false' w='7813' x='20573' y='13704' />
+        <zone h='4352' id='33' name='Materias Aprobadas' show-title='false' w='5781' x='37813' y='13519' />
+        <zone h='4352' id='34' name='Materias Reprobadas' show-title='false' w='7604' x='52604' y='13519' />
+        <zone h='46481' id='35' name='Desertores por Cohorte ' show-title='false' w='37240' x='417' y='25556' />
+        <zone forceUpdate='true' h='2778' id='36' type='text' w='52188' x='2344' y='82407'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#f5f5f5'>Año de Deserción</run>
+          </formatted-text>
+        </zone>
+        <zone h='2963' id='37' type='text' w='14219' x='313' y='22778'>
+          <formatted-text>
+            <run fontcolor='#f5f5f5' fontsize='14'>Deserciones por Cohorte</run>
+          </formatted-text>
+        </zone>
+        <zone h='45185' id='38' name='Cuadro Resumen (2)' show-title='false' w='26198' x='38542' y='27315' />
+      </zones>
+    </dashboard>
+    <dashboard name='Egresador por Cohorte'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='56111' id='21' param='horz' type='layout-flow' w='45833' x='41615' y='25278'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#252c3f' />
+          </zone-style>
+        </zone>
+        <zone h='9074' id='1' param='horz' type='layout-flow' w='87344' x='260' y='93'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#252c3f' />
+          </zone-style>
+        </zone>
+        <zone h='7222' id='2' is-centered='0' is-scaled='1' param='C:/SMAE/Imagenes/SMAEChico.png' type='bitmap' w='9635' x='1094' y='1296' />
+        <zone forceUpdate='true' h='6389' id='3' type='text' w='76927' x='10052' y='1204'>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontsize='24'>Egresados de </run>
+          </formatted-text>
+        </zone>
+        <zone h='15463' id='4' param='vert' type='layout-flow' w='14844' x='260' y='9444'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#6d909c' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='2963' id='6' type='text' w='20208' x='365' y='9630'>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontsize='16'>Promedio Tiempo de Egreso</run>
+          </formatted-text>
+        </zone>
+        <zone h='8611' id='7' name='Promedio Tiempo de Egreso' show-title='false' w='7656' x='6771' y='14352'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#6d909c' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='3519' id='8' type='text' w='6302' x='6667' y='20926'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#e6e6e6' fontsize='16'>Años</run>
+          </formatted-text>
+        </zone>
+        <zone h='15463' id='9' param='vert' type='layout-flow' w='15990' x='15313' y='9444'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#6d909c' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='2963' id='10' type='text' w='6042' x='15469' y='9722'>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontsize='16'>Exámenes</run>
+          </formatted-text>
+        </zone>
+        <zone h='10463' id='11' is-centered='0' is-scaled='1' param='C:/SMAE/Imagenes/examen.png' type='bitmap' w='5469' x='15521' y='13889' />
+        <zone h='9722' id='12' is-centered='0' is-scaled='1' param='C:/SMAE/Imagenes/clock2.png' type='bitmap' w='5990' x='417' y='14352' />
+        <zone h='10000' id='13' name='% Aprobacion' show-title='false' w='10417' x='20729' y='14167' />
+        <zone forceUpdate='true' h='4259' id='14' type='text' w='10521' x='20833' y='20278'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#f5f5f5' fontsize='16'>Ex. Aprobados</run>
+          </formatted-text>
+        </zone>
+        <zone h='15463' id='15' param='vert' type='layout-flow' w='15573' x='31615' y='9444'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#6d909c' />
+          </zone-style>
+        </zone>
+        <zone h='11389' id='16' is-centered='0' is-scaled='1' param='C:/SMAE/Imagenes/estudiante.png' type='bitmap' w='5729' x='31875' y='13426' />
+        <zone forceUpdate='true' h='2963' id='17' type='text' w='20781' x='31667' y='9722'>
+          <formatted-text>
+            <run fontcolor='#f5f5f5' fontsize='16'>Promedio Edad de Egresados</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='3519' id='18' type='text' w='10521' x='36563' y='20833'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#f5f5f5' fontsize='16'>Años</run>
+          </formatted-text>
+        </zone>
+        <zone h='15278' id='19' param='horz' type='layout-flow' w='40000' x='47396' y='9537'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#6d909c' />
+          </zone-style>
+        </zone>
+        <zone h='56111' id='22' param='horz' type='layout-flow' w='41198' x='260' y='25278'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ea8859' />
+          </zone-style>
+        </zone>
+        <zone h='43611' id='23' name='Egresados por Cohorte' show-title='false' w='39844' x='573' y='29074' />
+        <zone h='50463' id='24' name='Cuadro Resumen' show-title='false' w='25260' x='42031' y='29352' />
+        <zone forceUpdate='true' h='3611' id='25' type='text' w='23385' x='41823' y='25648'>
+          <formatted-text>
+            <run fontcolor='#f5f5f5' fontsize='16'>Cuadro Resumen</run>
+          </formatted-text>
+        </zone>
+        <zone h='11667' id='26' is-centered='0' is-scaled='1' param='C:/SMAE/Imagenes/Users-Student-icon.png' type='bitmap' w='7240' x='47708' y='13056' />
+        <zone forceUpdate='true' h='3519' id='27' type='text' w='19427' x='47448' y='9630'>
+          <formatted-text>
+            <run fontcolor='#f5f5f5' fontsize='16'>Prom. Materias Recursadas</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='3519' id='28' type='text' w='8490' x='55729' y='20833'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#f5f5f5' fontsize='16'>Materias</run>
+          </formatted-text>
+        </zone>
+        <zone h='8056' id='29' name='Promedio Edad Egreso' show-title='false' w='9531' x='37188' y='13796' />
+        <zone h='6667' id='30' name='Especialidad' show-title='false' w='59896' x='20729' y='2222' />
+        <zone h='9444' id='31' name='Promedio Materias Recursadas' show-title='false' w='9792' x='55260' y='14352' />
+        <zone h='2963' id='32' type='text' w='13229' x='625' y='25833'>
+          <formatted-text>
+            <run fontcolor='#f5f5f5' fontsize='14'>Egresados por Cohorte</run>
+          </formatted-text>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows show-side-pane='false' source-height='30'>
+    <window class='dashboard' maximized='true' name='Egresador por Cohorte'>
+      <viewpoints>
+        <viewpoint name='% Aprobacion' />
+        <viewpoint name='Cuadro Resumen' />
+        <viewpoint name='Egresados por Cohorte'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Especialidad' />
+        <viewpoint name='Promedio Edad Egreso' />
+        <viewpoint name='Promedio Materias Recursadas' />
+        <viewpoint name='Promedio Tiempo de Egreso' />
+      </viewpoints>
+      <active id='-1' />
+      <device-preview selected='Desktop' visible='true'>
+        <device name='Generic Desktop Monitor' type='Desktop' />
+      </device-preview>
+    </window>
+    <window class='dashboard' name='Deserción por Cohorte'>
+      <viewpoints>
+        <viewpoint name='% Desaprobados' />
+        <viewpoint name='Cuadro Resumen (2)' />
+        <viewpoint name='Desertores por Cohorte '>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Especialidad'>
+          <selection-collection>
+            <tuple-selection>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields />
+                    <y-fields />
+                  </pane-descriptor>
+                  <columns>
+                    <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:especialidad:nk]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>&quot;Ingeniería Civil&quot;</value>
+                </tuple>
+              </tuple-reference>
+            </tuple-selection>
+          </selection-collection>
+        </viewpoint>
+        <viewpoint name='Materias Aprobadas' />
+        <viewpoint name='Materias Reprobadas' />
+        <viewpoint name='Promedio Tiempo de Permanencia' />
+      </viewpoints>
+      <active id='1' />
+      <device-preview selected='Desktop' visible='true'>
+        <device name='Generic Desktop Monitor' type='Desktop' />
+      </device-preview>
+    </window>
+    <window class='worksheet' hidden='true' name='% Aprobacion'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643617476609:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='% Desaprobados'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319458770946:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>0.23083532811774854</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643617476609:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643646234627:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_722546319458770946:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Cuadro Resumen'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoabandono:qk]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:especialidad:nk]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:legajo (EgresadosEgresados.txt):nk]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:legajo:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Cuadro Resumen (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoabandono:qk]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:especialidad:nk]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:legajo (EgresadosEgresados.txt):nk]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:legajo:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Desertores por Cohorte '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643646234627:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoabandono:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:especialidad:nk]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:legajo (EgresadosEgresados.txt):nk]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:legajo:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Egresados por Cohorte'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:especialidad:nk]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:legajo (EgresadosEgresados.txt):nk]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:legajo:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Especialidad'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:especialidad:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Materias Aprobadas'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:aux2:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>5.8322427126710288</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643646234627:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Materias Reprobadas'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[avg:Calculation_722546319452336128:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>11.547293277810827</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643646234627:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Promedio Edad Egreso'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_460493115751870464:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_460493115751870464:qk]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:anoingreso:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso (EgresadosEgresados.txt1):ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:especialidad:nk]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:legajo (EgresadosEgresados.txt1):nk]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:legajo:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Promedio Materias Recursadas'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:legajo:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Promedio Tiempo de Egreso'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643606347776:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Promedio Tiempo de Permanencia'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643606347776:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:Calculation_701998643646234627:ok]</field>
+            <field>[federated.0rjitg218g2vpu1dd4aa606pzyfs].[none:añoegreso:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Deserción por Cohorte' width='192'>
+      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
+      vrrvf6z1P4LjtQ6+AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Egresador por Cohorte' width='192'>
+      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
+      0xU+y584cGpvDoG0/wAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
